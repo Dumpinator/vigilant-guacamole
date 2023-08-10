@@ -1,0 +1,32 @@
+@use 'sass:math';
+
+$gutter: 1.5rem;
+$halfGutter: math.div($gutter, 2);
+
+$sizeLogo: 60px;
+
+$BgMainColor: #1f253e;
+$BgSecondaryColor: #2C324F;
+
+$mainColor: #e3e3e3;
+$secondaryColor: #858aa0;
+
+// Memphis Colors
+$blue-color: #166CF5;
+$blue-color-a: rgba(22, 108, 245, 1);
+
+$yellow-color: #FDCF00;
+$yellow-color-a: rgba(253, 207, 0, 1);
+
+$orange-color: #F77B01;
+$orange-color-a: rgba(247, 123, 1, 1);
+
+$pink-color: #FEB4D9;
+$pink-color-a: rgba(254, 180, 217, 1);
+
+$black-color: #1f253e;
+$black-color-a: rgba(31, 37, 62, 0.4);
+
+// breakpoints
+$oneColum: 634px;
+$twoColum: 1024px;

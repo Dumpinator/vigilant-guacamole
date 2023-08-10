@@ -1,0 +1,36 @@
+@use 'src/styles/vars' as v;
+
+
+.icons {
+	position: relative;
+	padding: 20px;
+
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+	.icon1 {
+		position: absolute;
+		z-index: 2;
+		color: v.$blue-color;
+	}
+
+	.icon2 {
+		position: absolute;
+		bottom: 0;
+		z-index: 1;
+		color: v.$orange-color;
+		opacity: 0;
+	}
+
+	@media screen and (max-width: v.$oneColum) {
+		.icon1 {
+			color: #FFF;
+			transform: scale(1.2);
+		}
+
+		.icon2 {
+			display: flex;
+		}
+	}
+}
