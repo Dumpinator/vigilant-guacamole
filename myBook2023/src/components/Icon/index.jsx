@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { ImLinkedin, ImProfile } from 'react-icons/im'
+import { ImLinkedin, ImProfile, ImLab } from 'react-icons/im'
 import { Link } from 'react-router-dom';
 import './styles.scss';
 
@@ -45,8 +45,8 @@ export const Icons = ({ icon }) => {
                     onMouseEnter={() => setHover(true)}
                     onMouseLeave={() => functest()}
                 >
-                    <ImLinkedin className='icon1' style={ hover ? fadeOutUp : hovered ? fadeInDown : null } />
-                    <ImLinkedin className='icon2' style={ hover ? fadeInUp : hovered ? fadeOutDown : null } />
+                    <ImLab className='icon1' style={ hover ? fadeOutUp : hovered ? fadeInDown : null } />
+                    <ImLab className='icon2' style={ hover ? fadeInUp : hovered ? fadeOutDown : null } />
                 </a>
             );
 

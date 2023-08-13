@@ -1,5 +1,7 @@
 @use 'src/styles/vars' as v;
 
+@import url('https://fonts.googleapis.com/css2?family=Karla:wght@400;600;800&display=swap');
+
 nav {
 	width: 100%;
 	position: sticky;
@@ -49,11 +51,12 @@ nav {
 				display: flex;
 				justify-content: center;
 				align-items: center;
-				width: v.$sizeLogo;
-				height: v.$sizeLogo;
+				width: 200px;
+				height: 60px;
 
 				img {
 					width: 100%;
+					margin-left: 4em;
 				}
 			}
 		}
@@ -65,16 +68,19 @@ nav {
 			display: flex;
 
 			li {
+				display: flex;
 				list-style-type: none;
 				flex-direction: row;
 				align-items: center;
 				justify-content: center;
 
 				a {
+					font-family: 'Karla', sans-serif;
+					font-weight: 900;
 					display: flex;
 					text-decoration: none;
 					padding: 20px; // détermine la hauteur de nav
-					color: v.$black-color-a;
+					color: v.$black-color;
 
 					&:hover {
 						color: v.$orange-color;

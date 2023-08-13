@@ -8,20 +8,19 @@ import './styles.scss';
 
 
 export const section = [
-    { section: 'Home'},
-    { section: 'Project' },
-    { section: 'About' },
+    { section: 'Projets'},
+    { section: 'A Propos' },
 ]
 
-export const Navbar = ({ summary }) => {
+export const Navbar = () => {
 
     const [isOpen, setIsOpen] = useState(false)
     const nodeRef = useRef(null)
 
-    const menu = section.map(({ section }) => <li key={`${section}`}
-        className={`menu m-${section.replaceAll(' ', '-').toLocaleLowerCase()}`}>
-        <NavLink to={`${section.toLocaleLowerCase()}`}>{section}</NavLink>
-            </li> );
+    const menu = section.map(({ section }) => 
+        <li key={`${section}`} className={`menu m-${section.replaceAll(' ', '-').toLocaleLowerCase()}`}>
+            <NavLink to={`${section.toLocaleLowerCase()}`}>{section}</NavLink>
+        </li> );
 
     return (
         <nav>
@@ -51,7 +50,10 @@ export const Navbar = ({ summary }) => {
                         { menu }
                         <li>
                             <Icons icon="Linkedin" />
-                            <Icons icon="Profil" />
+                        </li>
+                        <li
+                            className={`menu m-V`}>
+                            <NavLink to={`/contact`}>Contact</NavLink>
                         </li>
                     </ul>
                 </div>

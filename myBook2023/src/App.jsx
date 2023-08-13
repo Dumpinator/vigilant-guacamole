@@ -8,7 +8,9 @@ function App() {
     <Routes>
       <Route element={<MainLayout/> }>
         <Route path="/" element={<Home/>} />
-        <Route path="/folders" element={<div>folders</div>} />
+        <Route path="/projets" element={<div>projets</div>} />
+        <Route path="/about" element={<div>about</div>} />
+        <Route path="/contact" element={<div>contact</div>} />
       </Route >
 
       <Route path="*" element={<div>error 404</div>} />
