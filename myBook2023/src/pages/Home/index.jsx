@@ -8,14 +8,15 @@ export function Home() {
     <div className='home__container'>
       <div className='section-1'>
           <div className='container'>
-            <header className='header__content'>
-              <div className='title'>
-                <span>PORT</span>
-                <span>FOLIO</span>
-                <p>Hello, je m’appelle Delphine et je suis basée à Paris! Passionnée par le design d’interface, 
-                  j’exerce ce métier depuis 5ans. Je vous laisse découvrir mon univers et mon parcours.
-                </p>
-              </div>
+            <div className='hero'>
+              <p>Hello, moi c'est Delphine</p>
+              <h1>Designer</h1>
+              <h1>UX UI</h1>
+              <p>Je suis une passionnée de design et j’aime confectionner de nouvelles interfaces. J’exerce ce métier depuis 5 ans. Je vous laisse découvrir mon univers et mon parcours.</p>
+            </div>
+            <div className='popup'>
+                  <img src='test.png'/>
+                  <div className='background__img' />
               <div className='test'>
                 <div className='toto'>
                   <div className='to'></div>
@@ -24,16 +25,26 @@ export function Home() {
                   <div className='tu'></div>
                 </div>
               </div>
-            </header>
+            </div>
           </div>
       </div>
       <div className='section-2'>
-        <div className='left'>
-          <div className='card'></div>
-          <div className='card'></div>
-          <div className='card'></div>
+        <h2>J’apporte mon pixel à l’édifice</h2>
+        <div className='container'>
+          <div className='left'>
+            <div className='card'></div>
+            <div className='card'></div>
+            <div className='card'></div>
+          </div>
+          <div className='right'>
+            <div className='text'>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur officiis quo qui 
+                ratione iusto ducimus! Ad animi aspernatur aliquid, neque quia molestiae placeat voluptatem quaerat. Enim velit architecto assumenda molestias.</p>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur officiis quo qui 
+                ratione iusto ducimus! Ad animi aspernatur aliquid, neque quia molestiae placeat voluptatem quaerat. Enim velit architecto assumenda molestias.</p>
+            </div>
+          </div>
         </div>
-        <div className='right'></div>
       </div>
     </div>
   )
