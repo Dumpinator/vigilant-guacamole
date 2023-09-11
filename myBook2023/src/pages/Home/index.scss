@@ -81,7 +81,7 @@
                     -webkit-box-sizing: border-box;
                     border: white solid 10px;
                 }
-                .test {
+                .popup__cach {
                     position: absolute;
                     z-index: 1;
                     width: 100%;
@@ -143,6 +143,13 @@
         h2 {
             text-align: center;
             margin: 3em;
+            color: var(--Black, #22162B);
+            text-align: center;
+            font-family: Karla;
+            font-size: 40px;
+            font-style: normal;
+            font-weight: 800;
+            line-height: normal;
         }
         .container {
             display: flex;
@@ -157,36 +164,130 @@
                 display: flex;
                 flex-direction: column;
                 align-items: center;
-                height: 100vh;
-    
-                .card {
-                    background-color: aliceblue;
-                    border-radius: 25px;
-                    height: 250px;
-                    width: 250px;
-                    margin-bottom: 3em;
+                
+                .row {
+                    width: 100%;
+                    max-width: 512px;
+                    display: flex;
+                    justify-content: end;
+                    align-items: center;
                 }
+                .row:nth-child(2) {
+                    justify-content: start;
+                }
+                .row.mobile { justify-content: center}
             }
 
             .right {
                 display: flex;
                 flex-direction: column;
                 max-width: 50%;
-                background-color: #FFDA44;
-                height: 100vh;
-            
+                min-height:600px;
 
                 .text {
                     display: flex;
                     flex-direction: column;
                     justify-content: center;
-                    padding: 20px;
+                    align-items: center;
 
                     p {
                         max-width: 60%;
+                        color: #171D1C;
+                        font-family: Karla;
+                        font-size: 20px;
+                        font-style: normal;
+                        font-weight: 700;
+                        line-height: 150%; /* 30px */
+                    }
+                }
+            } .right.mobile { max-width: 80%; text-align: center;}
+        } 
+        .container.mobile { flex-direction: column-reverse; align-items: center; }
+    }
+
+    .section-3 {
+
+
+        h2 {
+            text-align: center;
+            margin: 3em;
+            color: var(--Black, #22162B);
+            text-align: center;
+            font-family: Karla;
+            font-size: 40px;
+            font-style: normal;
+            font-weight: 800;
+            line-height: normal;
+        }
+
+        .container {
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+            .title {
+                text-transform: uppercase;
+                color: #22162B;
+                text-align: center;
+                font-family: Karla;
+                font-size: 150px;
+                font-style: normal;
+                font-weight: 800;
+                line-height: normal;
+                margin: 0;
+            }
+
+            img {
+                position: relative;
+                max-width: 60%;
+                bottom: 60px;
+            }
+
+            .subtitle {
+                margin: 0;
+                color: #22162B;
+                font-family: Karla;
+                font-size: 18px;
+                font-style: italic;
+                font-weight: 400;
+                line-height: 200%; /* 36px */
+            }
+
+            .cta {
+                width: 100%;
+                display: flex;
+                flex-wrap: wrap;
+
+                .description {
+                    max-width: 300px;
+                    display: flex;
+                    flex-direction: column;
+                    margin-left: 18px;
+
+                    .name {
+                        color: #22162B;
+                        font-family: Karla;
+                        font-size: 20px;
+                        font-style: normal;
+                        font-weight: 800;
+                        line-height: 160%; /* 32px */
+                        text-transform: capitalize;
+                    }
+
+                    .details {
+                        margin-top: 18px;
+                        color: #22162B;
+                        font-family: Karla;
+                        font-size: 18px;
+                        font-style: normal;
+                        font-weight: 600;
+                        line-height: 160%; /* 28.8px */
                     }
                 }
             }
+
         }
+        .container.mobile {  }
     }
 }

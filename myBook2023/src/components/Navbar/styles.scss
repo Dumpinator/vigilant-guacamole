@@ -6,7 +6,7 @@ nav {
 	width: 100%;
 	position: sticky;
 	top: 0;
-	z-index: 10;
+	z-index: 100;
 
 	.menu-mobile {
 		text-transform: uppercase;
@@ -16,7 +16,7 @@ nav {
 		background-color: #fff;
 		box-shadow: 0 10px 20px 1px v.$black-color-a;
 		position: relative;
-		z-index: 15;
+		z-index: 150;
 		display: none;
 
 		.is-open {
@@ -112,7 +112,7 @@ nav {
 		justify-content: space-between;
 		position: sticky;
 		top: 0;
-		z-index: 10;
+		z-index: 100;
 
 		// Label
 		.menu-mobile {
@@ -170,7 +170,7 @@ nav {
 			& ~ .list {
 				max-height: 50vh;
 				position: relative;
-				z-index: 5;
+				z-index: 50;
 			}
 		}
 	}
