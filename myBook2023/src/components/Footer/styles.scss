@@ -1,0 +1,82 @@
+@use 'src/styles/vars' as v;
+
+.footer {
+	//margin-top: 4em;
+	display: flex;
+	flex-wrap: wrap;
+	background-color: #171D1C;
+	color: #FFF;
+	padding: 1em;
+	
+	.left {
+		max-width: 50%;
+		min-width: 300px;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+
+		.title {
+			font-family: Karla;
+			font-size: 50px;
+			font-style: normal;
+			font-weight: 800;
+			line-height: normal;
+			margin-bottom: 0;
+			text-align: center;
+		}
+		.details {
+			max-width: 70%;
+			font-family: Karla;
+			font-size: 16px;
+			font-style: italic;
+			font-weight: 500;
+			line-height: 150%; /* 24px */
+		}
+	}
+
+	.right {
+		min-width: 45%;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		padding: 1em;
+
+		.email, .tel, .social {
+			padding: 1em;
+			color: #FFF;
+			font-family: Karla;
+			font-size: 16px;
+			font-style: normal;
+			font-weight: 700;
+			line-height: 160%; /* 25.6px */
+		}
+
+		.social {
+			display: flex;
+			flex-wrap: wrap;
+			padding: 0 1em;
+
+			.wrapper {
+				margin: 0 10px;
+			}
+		}
+	}
+
+
+
+	@media screen and (max-width: "634px") {
+
+		.left {
+			.title {
+				text-align: center;
+			}
+		}
+		.right {
+			width: 100%;
+
+			
+		}
+		
+	}
+}

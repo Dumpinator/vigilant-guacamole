@@ -1,0 +1,80 @@
+.projects__container {
+    
+    .container {
+		position: relative;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+
+		.title {
+			text-transform: uppercase;
+			color: #22162B;
+			text-align: center;
+			font-family: Karla;
+			font-size: 150px;
+			font-style: normal;
+			font-weight: 800;
+			line-height: normal;
+			margin: 0;
+		}
+		.image {
+			display: flex;
+			justify-content: center;
+			margin: 0 auto;
+			max-width: 50%;
+			img {
+				position: relative;
+				max-width: 100%;
+				bottom: 60px;
+			}
+		}
+
+		.subtitle {
+			text-align: center;
+			margin: 0;
+			color: #22162B;
+			font-family: Karla;
+			font-size: 18px;
+			font-style: italic;
+			font-weight: 400;
+			line-height: 200%; /* 36px */
+		}
+
+		.cta {
+			width: 100%;
+			display: flex;
+			flex-wrap: wrap;
+			margin-left: 10%;
+
+			.description {
+				max-width: 300px;
+				display: flex;
+				flex-direction: column;
+
+				.name {
+					color: #22162B;
+					font-family: Karla;
+					font-size: 20px;
+					font-style: normal;
+					font-weight: 800;
+					line-height: 160%; /* 32px */
+					text-transform: capitalize;
+				}
+
+				.details {
+					margin-top: 18px;
+					color: #22162B;
+					font-family: Karla;
+					font-size: 18px;
+					font-style: normal;
+					font-weight: 600;
+					line-height: 160%; /* 28.8px */
+				}
+			}
+			.projects {
+				margin: 1em;
+			}
+		}
+
+	}
+}

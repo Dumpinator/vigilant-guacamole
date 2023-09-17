@@ -41,13 +41,13 @@ export const Icons = ({ icon }) => {
     switch (icon) {
         case 'Linkedin':
             return (
-                <a href='https://www.linkedin.com/in/delphine-gaspar/' target={'_blank'} rel='noopener noreferrer' className='icons'
+                <Link to='/lelab' className='icons'
                     onMouseEnter={() => setHover(true)}
                     onMouseLeave={() => functest()}
                 >
                     <ImLab className='icon1' style={ hover ? fadeOutUp : hovered ? fadeInDown : null } />
                     <ImLab className='icon2' style={ hover ? fadeInUp : hovered ? fadeOutDown : null } />
-                </a>
+                </Link>
             );
 
         case 'Profil':

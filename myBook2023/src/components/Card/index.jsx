@@ -21,7 +21,7 @@ export const Card = ({ title, text, icon, tags, color }) => {
                         <div className='tags'>
                            {
                             tags?.map((text, index) => 
-                                <Tag text={text} />
+                                <Tag key={text+index+Date.now()} text={text} />
                             )
                            }
                         </div>

@@ -1,7 +1,7 @@
 import { useState } from 'react'
-import { Routes, Route, Outlet, Link } from "react-router-dom"
-import { Card } from '../../components/Card/index.jsx';
-import mockup from '../../assets/mockup.png';
+import { Card } from '../../components/Card'
+import {SimpleSlider} from '../../components/SimpleSlider'
+import { Footer } from '../../components/Footer/index.jsx'
 import './index.scss'
 
 export function Home({mediaQuery816}) {
@@ -29,7 +29,6 @@ export function Home({mediaQuery816}) {
       color: "#EFC644"
     },
   ])
-
 
   return (
     <div className='home__container'>
@@ -80,23 +79,9 @@ export function Home({mediaQuery816}) {
 
       <div className='section-3'>
         <h2>Dernière réalisation</h2>
-        <div className={`container${ mediaQuery816 ? '' : ' mobile'}`}>
-          <h1 className='title'>freepry</h1>
-          <img src={mockup}/>
-          <p className='subtitle'>Refonte de l’onglet “reprise d’un article”</p>
-          <div className='cta'>
-            <div className='description'>
-              <div className='name'>freepry</div>
-              <div className='details'>Lorem ipsum dolor sit amet consectetur. Cursus vel eget convallis sed aliquam lacus massa.
-                Pharetra tellus porttitor nibh velit viverra. Sed dui eu faucibus
-              </div>
-            </div>
-            <div className='projects'>
-              <Link to={'projets'}>ici</Link>
-            </div>
-          </div>
-        </div>
+        <SimpleSlider mediaQuery816={mediaQuery816} />
       </div>
+     <Footer mediaQuery816={mediaQuery816} />
     </div>
   )
 }
