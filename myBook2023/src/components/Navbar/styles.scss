@@ -1,12 +1,20 @@
 @use 'src/styles/vars' as v;
 
 @import url('https://fonts.googleapis.com/css2?family=Karla:wght@400;600;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Karla:wght@400;600;800&display=swap');
+
+
+
+$text-black-color: #22162B;
+$text-hover-color: #B72AA9;
+$text-select-color: #DD69D1;
 
 nav {
 	width: 100%;
 	position: sticky;
 	top: 0;
 	z-index: 100;
+	border-bottom: solid 4px #171D1C;
 
 	.menu-mobile {
 		text-transform: uppercase;
@@ -14,14 +22,12 @@ nav {
 		font-size: 16px;
 		color: #fff;
 		background-color: #fff;
-		box-shadow: 0 10px 20px 1px v.$black-color-a;
+		box-shadow: 0 10px 20px 1px #22162B;
 		position: relative;
 		z-index: 150;
 		display: none;
 
 		.is-open {
-			//-webkit-filter: drop-shadow(0 0 5px #fff) drop-shadow(0 0 10px #1e90ff) drop-shadow(0 0 15px #fff) drop-shadow(0 0 20px #1e90ff) drop-shadow(0 0 30px #1e90ff) drop-shadow(0 0 40px #1e90ff) drop-shadow(0 0 50px #1e90ff);
-			//filter: drop-shadow(0 0 5px #fff) drop-shadow(0 0 10px #1e90ff) drop-shadow(0 0 15px #fff) drop-shadow(0 0 20px #1e90ff) drop-shadow(0 0 30px #1e90ff) drop-shadow(0 0 40px #1e90ff) drop-shadow(0 0 50px #1e90ff);
 			-webkit-transform: rotate(360deg);
 			transform: rotate(360deg) scale(1.2); ;
 			transition: all 0.3s ease-in-out;
@@ -37,26 +43,29 @@ nav {
 	}
 
 	.list {
-		//box-shadow: 0 10px 20px 1px rgb( 0 0 0 / 45% );
 		background-color: #fff;
-
 		display: flex;
 		flex-direction: row;
 		align-items: center;
 		justify-content: space-between;
 
 		.logo-icon {
-
+			text-decoration: none;
 			.logo {
 				display: flex;
 				justify-content: center;
 				align-items: center;
-				width: 200px;
 				height: 60px;
 
-				img {
+				h1 {
 					width: 100%;
 					margin-left: 4em;
+					color: var(--Black, #22162B);
+					font-family: Anton;
+					font-size: 24px;
+					font-style: normal;
+					font-weight: 400;
+					line-height: normal;
 				}
 			}
 		}
@@ -76,19 +85,19 @@ nav {
 
 				a {
 					font-family: 'Karla', sans-serif;
-					font-weight: 900;
 					display: flex;
 					text-decoration: none;
+					font-weight: 900;
 					padding: 20px; // détermine la hauteur de nav
 					color: v.$black-color;
 
 					&:hover {
-						color: v.$orange-color;
+						color: $text-hover-color;
 						transition: color 0.3s ease;
 					}
 				}
 
-				.active { color: v.$orange-color; }
+				.active { color: $text-select-color; }
 			}
 
 			li:last-child {
@@ -107,7 +116,6 @@ nav {
 
 	nav {
 		flex-direction: column;
-		//height: 60px;
 		align-items: center;
 		justify-content: space-between;
 		position: sticky;

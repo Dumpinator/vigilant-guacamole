@@ -3,13 +3,13 @@ import { Link, NavLink } from 'react-router-dom';
 import { CSSTransition } from 'react-transition-group';
 import { Icons } from '../Icon';
 import { FaHamburger } from 'react-icons/fa';
-import logo from '../../assets/logo.png';
 import './styles.scss';
 
 
 export const section = [
     { section: 'Projets'},
     { section: 'À propos' },
+    { section: 'Contact' },
 ]
 
 export const Navbar = () => {
@@ -42,18 +42,12 @@ export const Navbar = () => {
                         !isOpen &&
                         <Link to="/" className="logo-icon">
                             <div className="logo">
-                                <img src={logo} className='picture-author' alt="logo GD" />
+                                <h1>DELPHINE GASPAR</h1>
                             </div>
                         </Link>
                     }
                     <ul>
                         { menu }
-                        {/*
-                        <li
-                            className={`menu m-V`}>
-                            <NavLink to={`/about`}>Contact</NavLink>
-                        </li>
-                        */}
                         <li>
                             <Icons icon="Linkedin" />
                         </li>

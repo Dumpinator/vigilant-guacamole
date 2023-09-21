@@ -10,21 +10,21 @@ export function Home({mediaQuery816}) {
     {
       title: "discovery",
       text: "Analyse heuristique, interviews, tests utilisateurs, empathy map, userflow.",
-      icon: "toto",
+      icon: "search",
       tags: ["Fijam", "Miro"],
       color: "#DD69D1"
     },
     {
       title: "découpage",
       text: "Rédaction des users stories, comportement technique attendu, épics et features.",
-      icon: "toto",
+      icon: "cut",
       tags: ["Notion", "Github Project"],
       color: "#62B6AB"
     },
     {
       title: "librairie",
       text: "Création d’un KIT UI contenant les composants et les variants.",
-      icon: "toto",
+      icon: "lib",
       tags: ["Figma"],
       color: "#EFC644"
     },
@@ -35,10 +35,11 @@ export function Home({mediaQuery816}) {
       <div className='section-1'>
           <div className={`container ${ mediaQuery816 ? 'mobile' : ''}`}>
             <div className='hero'>
-              <p>Hello, moi c'est Delphine</p>
               <h1>Designer</h1>
               <h1>UX UI</h1>
-              <p>Je suis une passionnée de design et j’aime confectionner de nouvelles interfaces. J’exerce ce métier depuis 5 ans. Je vous laisse découvrir mon univers et mon parcours.</p>
+              <p>Hello, moi c’est Delphine et je vous souhaite la bienvenue !</p>
+              <p>Passionnée de design et d'interfaces.</p>
+              <p>Je vous laisse découvrir mon univers et mon parcours.</p>
             </div>
             <div className='popup'>
                   <img src='test.png'/>
