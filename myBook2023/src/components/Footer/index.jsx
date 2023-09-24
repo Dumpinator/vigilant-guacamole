@@ -1,10 +1,7 @@
-import React from 'react';
-import { Link } from "react-router-dom"
-import { Btn } from '../../components/Btn'
-import './styles.scss';
+import React from 'react'
+import './styles.scss'
 
 export const Footer = ({mediaQuery816}) => {
-    !mediaQuery816 ? (console.log("ici",mediaQuery816)) : console.log('rien');
     return (
         <div className='footer'>
             <div className='left' style={ !mediaQuery816 ? {maxWidth:"100%"} : null}>
@@ -14,8 +11,14 @@ export const Footer = ({mediaQuery816}) => {
             <div className='right' style={ !mediaQuery816 ? {width:"100%"} : null}>
                 <div className='email'>gaspardelphine01@gmail.com</div>
                 <div className='social'>
-                    <Btn text={"CV"}/>
-                    <Btn text={"LINKEDIN"}/>
+                    <a href="/cv.pdf" target='_blank' rel='noopener noreferrer' className='wrapper'> 
+                        <div  className='btn'>CV</div>
+                        <div className='fix'></div>
+                    </a>
+                    <a href=" https://www.linkedin.com/in/delphine-gaspar/" target='_blank' rel='noopener noreferrer' className='wrapper'> 
+                        <div  className='btn'>LINKEDIN</div>
+                        <div className='fix'></div>
+                    </a>
                 </div>
             </div>
         </div>

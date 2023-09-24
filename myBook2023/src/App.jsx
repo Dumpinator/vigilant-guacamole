@@ -1,10 +1,11 @@
 import React, { useEffect } from "react"
-import { Routes, Route, Outlet, Link } from "react-router-dom"
+import { Routes, Route } from "react-router-dom"
 import { useMediaQuery } from './hooks/useMediaQuery'
 import { MainLayout } from './layouts/MainLayout'
 import { Home } from './pages/Home'
 import { Projects } from './pages/Projects'
 import { About } from "./pages/About"
+import { Lab } from "./pages/lab"
 
 function App() {
 
@@ -20,7 +21,7 @@ function App() {
         <Route path="/projet/:slug" element={<div>projets slug</div>} />
         <Route path="/projets" element={<Projects  mediaQuery816={mediaQuery816} />} />
         <Route path="/about" element={<About mediaQuery816={mediaQuery816} />} />
-        <Route path="/lelab" element={<div>le lab</div>} />
+        <Route path="/lelab" element={<Lab mediaQuery816={mediaQuery816} />} />
       </Route>
 
       <Route path="*" element={<div>error 404</div>} />

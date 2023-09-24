@@ -9,6 +9,7 @@
         display: flex;
         justify-content: center;
         align-items: center;
+        padding-top: 4em;
 
         .container {
             display: flex;
@@ -21,7 +22,7 @@
 
             .hero {
                 max-width: 636px;
-                max-height: 512px;
+                //max-height: 512px;
                 margin-bottom: 5em;
                 p {
                     color: #171D1C;
@@ -131,11 +132,18 @@
                 }
             }
         }
+        @media screen and (max-width: "634px") {
+            .container {
+                .hero {
+                    padding: 20px;
+                }
+            }
+        }
     }
 
     .section-2 {
         width: 100%;
-        min-height: 90vh;
+        min-height: 100vh;
         //background-color: #EF8BE7;
         display: flex;
         flex-direction: column;

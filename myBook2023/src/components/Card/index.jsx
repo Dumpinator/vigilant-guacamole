@@ -1,11 +1,10 @@
-import React, { useState } from 'react';
-import { ImLinkedin, ImProfile, ImLab } from 'react-icons/im'
-import { MdSavedSearch, MdBorderColor, MdDesignServices  } from 'react-icons/md'
+import React, { Children } from 'react';
+import { MdSavedSearch, MdBorderColor, MdDesignServices, MdStar } from 'react-icons/md'
 import { Tag } from '../../components/Tag';
 import './styles.scss';
 
 
-export const Card = ({ title, text, icon, tags, color }) => {
+export const Card = ({ title, text, icon, tags, color, bg, children }) => {
 
     const customIcon = (icon) => {
         switch (icon) {
@@ -15,6 +14,8 @@ export const Card = ({ title, text, icon, tags, color }) => {
                 return <MdBorderColor className='icon-card'/>
             case 'lib':
                 return <MdDesignServices className='icon-card'/>
+            case 'star':
+                return <MdStar className='icon-card'/>
             default:
                return null;
         }
@@ -24,11 +25,22 @@ export const Card = ({ title, text, icon, tags, color }) => {
         <div className='card'>
             <div className='box__shadow'></div>
             <div className='box__content'>
-                <div className='test'>
-                    <div className='header' style={{backgroundColor: `${color}`}}>
-                        <p className='title'>{ title }</p>
-                        { icon ? customIcon(icon) : null }
-                    </div>
+                <div className='test' 
+                        style={ bg ? { 
+                            background: `url(${bg})`,
+                            backgroundSize: "cover",
+                            backgroundRepeat: "no-repeat",
+                            backgroundPosition: "center",
+                            overflow: "hidden",
+                            borderRadius: "24px",
+                        } : null }>
+                    {
+                        title ? 
+                            <div className='header' style={{backgroundColor: `${color}`}}>
+                                <p className='title'>{ title }</p>
+                                { icon ? customIcon(icon) : null }
+                            </div> : null
+                    }
                     <div className='content'>
                         <p className='text'>{ text }</p>
                         <div className='tags'>
@@ -39,6 +51,7 @@ export const Card = ({ title, text, icon, tags, color }) => {
                             )
                            }
                         </div>
+                        { children ? children : null }
                     </div>
                 </div>
                 <div className='toto'>

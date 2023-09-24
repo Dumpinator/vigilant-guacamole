@@ -6,7 +6,7 @@ import './index.scss'
 
 export function Home({mediaQuery816}) {
 
-  const [cards, setCards] = useState([
+  const [cards, _] = useState([
     {
       title: "discovery",
       text: "Analyse heuristique, interviews, tests utilisateurs, empathy map, userflow.",

@@ -8,8 +8,7 @@ import './styles.scss';
 
 export const section = [
     { section: 'Projets'},
-    { section: 'À propos' },
-    { section: 'Contact' },
+    { section: 'À propos' }
 ]
 
 export const Navbar = () => {
