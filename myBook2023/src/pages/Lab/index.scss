@@ -51,6 +51,10 @@
 
                     .card {
                         margin-bottom: 2em;
+
+                        .box__shadow {
+                            min-height:450px;
+                        }
                     }
 
                     .details {
