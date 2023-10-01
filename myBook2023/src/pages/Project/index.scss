@@ -1,0 +1,122 @@
+.project__container {
+
+	.top {
+		width: 100%;
+		display: flex;
+		align-items: center;
+
+		svg {
+			cursor: pointer;
+			padding: 20px;
+
+			&:hover {
+				transform: scale(1.4);
+			}
+		}
+
+		p {
+			color: #22162B;
+			font-family: Karla;
+			font-size: 18px;
+			font-style: normal;
+			font-weight: 600;
+			line-height: 160%;
+		}
+	}
+    .container {
+		display: flex;
+
+		.header {
+			width: 100%;
+
+			.logo {
+				max-width: 20%;
+				margin: 2em;
+				display: flex;
+				justify-content: center;
+				
+				img {
+					position: relative;
+					//max-width: 100%;
+				}
+			}
+			
+			.subtitle {
+				margin: 0 2em;
+				max-width: 50%;
+				color: #22162B;
+				font-family: Karla;
+				font-size: 24px;
+				font-style: italic;
+				font-weight: 400;
+				line-height: 200%; /* 36px */
+			}
+
+		}
+		
+		img {
+			margin: 3em 0;
+			border-radius: 15px;
+		}
+
+	}
+	.container.bg-freepry {
+		background: var(--gradient, linear-gradient(86deg, #D9F2E9 0%, #E1EBFE 100%));
+	}
+	.container.bg-lichess {
+		background-color: #E2E4F3;
+	}
+	.container.bg-socoon {
+		background-color: #DCF5F9;
+	}
+
+	.contexte {
+		margin: 3em;
+
+		&__title {
+			color: #22162B;
+			font-family: Karla;
+			font-size: 24px;
+			font-style: normal;
+			font-weight: 800;
+			line-height: 160%;
+		}
+		&__text {
+			margin: 1em 0;
+			color: #22162B;
+			font-family: Karla;
+			font-size: 18px;
+			font-style: normal;
+			font-weight: 400;
+			line-height: 160%;
+		}
+	}
+	.schema {
+		margin: 3em;
+		display: grid;
+		grid-template-columns: repeat(5, 1fr);
+		//grid-template-rows: repeat(2, 1fr);
+		grid-column-gap: 15px;
+
+		.col {
+			margin: 0 1em;
+			.schema__title {
+				color: #22162B;
+				font-family: Karla;
+				font-size: 18px;
+				font-style: normal;
+				font-weight: 800;
+				line-height: 160%;
+			}
+			.schema__text {
+				color: #22162B;
+				font-family: Karla;
+				font-size: 16px;
+				font-style: normal;
+				font-weight: 400;
+				line-height: 160%;
+			}
+		}
+
+	}
+}

@@ -1,4 +1,4 @@
-import React, { Children } from 'react';
+import React from 'react';
 import { MdSavedSearch, MdBorderColor, MdDesignServices, MdStar } from 'react-icons/md'
 import { Tag } from '../../components/Tag';
 import './styles.scss';

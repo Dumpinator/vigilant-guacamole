@@ -42,7 +42,7 @@ export function Home({mediaQuery816}) {
               <p>Je vous laisse découvrir mon univers et mon parcours.</p>
             </div>
             <div className='popup'>
-                  <img src='test.png'/>
+                  <img src='picture.png'/>
                   <div className='background__img' />
               <div className='popup__cach'>
                 <div className='toto'>

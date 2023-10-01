@@ -4,6 +4,7 @@ import { useMediaQuery } from './hooks/useMediaQuery'
 import { MainLayout } from './layouts/MainLayout'
 import { Home } from './pages/Home'
 import { Projects } from './pages/Projects'
+import { Project } from './pages/Project'
 import { About } from "./pages/About"
 import { Lab } from "./pages/lab"
 
@@ -18,7 +19,7 @@ function App() {
     <Routes>
       <Route element={<MainLayout children={undefined}/> }>
         <Route path="/" element={<Home mediaQuery816={mediaQuery816} />} />
-        <Route path="/projet/:slug" element={<div>projets slug</div>} />
+        <Route path="/projet/:slug" element={<Project  mediaQuery816={mediaQuery816} />} />
         <Route path="/projets" element={<Projects  mediaQuery816={mediaQuery816} />} />
         <Route path="/about" element={<About mediaQuery816={mediaQuery816} />} />
         <Route path="/lelab" element={<Lab mediaQuery816={mediaQuery816} />} />

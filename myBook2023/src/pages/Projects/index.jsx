@@ -10,7 +10,7 @@ export function Projects({mediaQuery816}) {
 
         <div className={`container${ mediaQuery816 ? '' : ' mobile'} bg-freepry`}>
           <h1 className='title'>freepry</h1>
-          <Link className='image' to={'projet/freepry'}>
+          <Link className='image' to={'/projet/freepry'}>
             <img src={mockup}/>
           </Link>
           <p className='subtitle'>Refonte de l’onglet “reprise d’un article”</p>
@@ -26,7 +26,7 @@ export function Projects({mediaQuery816}) {
 
         <div className={`container${ mediaQuery816 ? '' : ' mobile'} bg-lichess`}>
           <h1 className='title'>lichess</h1>
-          <Link className='image' to={'projet/freepry'}>
+          <Link className='image' to={'/projet/lichess'}>
             <img src={mockup}/>
           </Link>
           <p className='subtitle'>Refonte du plateau de jeu </p>
@@ -42,7 +42,7 @@ export function Projects({mediaQuery816}) {
 
         <div className={`container${ mediaQuery816 ? '' : ' mobile'}`}>
           <h1 className='title'>socoon</h1>
-          <Link className='image' to={'projet/freepry'}>
+          <Link className='image' to={'/projet/socoon'}>
             <img src={mockup}/>
           </Link>
           <p className='subtitle'>Refonte du parcours d’inscription</p>
