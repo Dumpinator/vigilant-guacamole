@@ -5,7 +5,9 @@ import { Footer } from '../../components/Footer/index.jsx'
 import logoF from '/LogoFreepry.svg'
 import logoL from '/LogoLichess.png'
 import logoS from '/LogoSocoon.png'
-import mockupF from '/moke01.jpg' 
+import mockupF from '/moke01.jpg'
+import mockupL from '/moke02.jpg'
+import mockupS from '/moke03.png'
 import './index.scss'
 
 export function Project({ mediaQuery816 }) {
@@ -138,13 +140,13 @@ export function Project({ mediaQuery816 }) {
             </div>
             <p className='subtitle'>How to improve the user experience on lichess.org for beginner level players?</p>
           </div>
-          <img src={mockupF}/>
+          <img src={mockupL} style={{ borderRadius: 0 }}/>
         </div>
         <div className="contexte">
           <div className="contexte__title">Contexte</div>
           <p className="contexte__text">
             Lichess.org called on us to improve the user experience on the platform. Our research has led us to propose a more intuitive user journey for a more specific 
-                    target: beginners.
+            target: beginners.
           </p>
         </div>
         <div className="schema">
@@ -190,7 +192,7 @@ export function Project({ mediaQuery816 }) {
             </div>
             <p className='subtitle'>Comment rendre un parcours d’inscription intuitif et incitatif ?</p>
           </div>
-          <img src={mockupF}/>
+          <img src={mockupS}/>
         </div>
         <div className="contexte">
           <div className="contexte__title">Contexte</div>

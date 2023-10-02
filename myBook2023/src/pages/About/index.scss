@@ -25,21 +25,21 @@
                 //max-height: 512px;
                 margin-bottom: 5em;
                 p {
-                    color: #171D1C;
+                    color: var(--Black, #22162B);
                     font-family: Karla;
                     font-size: 20px;
                     font-style: normal;
-                    font-weight: 700;
-                    line-height: 150%; /* 30px */
+                    font-weight: 600;
+                    line-height: 200%; /* 40px */
                 }
 
                 h1 {
                     margin: 0;
-                    color: var(--Black, #171D1C);
-                    font-family: Karla;
-                    font-size: 120px;
+                    color: var(--Black, #22162B);
+                    font-family: Anton;
+                    font-size: 40px;
                     font-style: normal;
-                    font-weight: 800;
+                    font-weight: 400;
                     line-height: normal;
                 }
             }
@@ -144,14 +144,15 @@
     .section-2 {
         width: 100%;
         min-height: 100vh;
-        //background-color: #EF8BE7;
+        background-color: #FDEDFB;
         display: flex;
         flex-direction: column;
 
         h2 {
-            margin: 3em;
+            margin-left: 4em;margin-left: 4em;
+            margin-top: 3em;
             color: var(--Black, #22162B);
-            font-family: Karla;
+            font-family: Anton;
             font-size: 40px;
             font-style: normal;
             font-weight: 800;
@@ -198,12 +199,12 @@
 
                     p {
                         max-width: 60%;
-                        color: #171D1C;
+                        color: var(--Black, #22162B);
                         font-family: Karla;
                         font-size: 20px;
                         font-style: normal;
-                        font-weight: 700;
-                        line-height: 150%; /* 30px */
+                        font-weight: 600;
+                        line-height: 200%;
                     }
                 }
             } .right.mobile { max-width: 80%; text-align: center;}
@@ -219,7 +220,7 @@
             margin: 1em;
             color: var(--Black, #22162B);
             text-align: center;
-            font-family: Karla;
+            font-family: A;
             font-size: 40px;
             font-style: normal;
             font-weight: 800;

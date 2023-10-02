@@ -29,17 +29,17 @@
                     font-family: Karla;
                     font-size: 20px;
                     font-style: normal;
-                    font-weight: 700;
+                    font-weight: 600;
                     line-height: 150%; /* 30px */
                 }
 
                 h1 {
                     margin: 0;
-                    color: var(--Black, #171D1C);
-                    font-family: Karla;
+                    color: var(--Black, #22162B);
+                    font-family: Anton;
                     font-size: 120px;
                     font-style: normal;
-                    font-weight: 800;
+                    font-weight: 400;
                     line-height: normal;
                 }
             }
@@ -142,10 +142,9 @@
 
         h2 {
             text-align: center;
-            margin: 3em;
             color: var(--Black, #22162B);
             text-align: center;
-            font-family: Karla;
+            font-family: Anton;
             font-size: 40px;
             font-style: normal;
             font-weight: 800;
@@ -161,6 +160,7 @@
             .left {
                 width: 50%;
                 min-width: 400px;
+                min-height: 800px;
                 display: flex;
                 flex-direction: column;
                 align-items: center;
@@ -196,7 +196,7 @@
                         font-family: Karla;
                         font-size: 20px;
                         font-style: normal;
-                        font-weight: 700;
+                        font-weight: 600;
                         line-height: 150%; /* 30px */
                     }
                 }
@@ -210,10 +210,10 @@
 
         h2 {
             text-align: center;
-            margin: 1em;
+            margin: 2em;
             color: var(--Black, #22162B);
             text-align: center;
-            font-family: Karla;
+            font-family: Anton;
             font-size: 40px;
             font-style: normal;
             font-weight: 800;

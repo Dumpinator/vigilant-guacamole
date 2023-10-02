@@ -20,6 +20,7 @@ export const SimpleSlider = ({mediaQuery816}) => {
   return (
     <Slider {...settings}>
       <div className={`container${ mediaQuery816 ? '' : ' mobile'} bg-freepry`}>
+          <h2>Dernière réalisation</h2>
           <h1 className='title'>freepry</h1>
           <Link className='image' to={'projet/freepry'}>
             <img src={mockup}/>
@@ -38,6 +39,7 @@ export const SimpleSlider = ({mediaQuery816}) => {
         </div>
 
         <div className={`container${ mediaQuery816 ? '' : ' mobile'} bg-lichess`}>
+          <h2>Dernière réalisation</h2>
           <h1 className='title'>lichess</h1>
           <Link className='image' to={'projet/freepry'}>
             <img src={mockup}/>
@@ -56,6 +58,7 @@ export const SimpleSlider = ({mediaQuery816}) => {
         </div>
 
         <div className={`container${ mediaQuery816 ? '' : ' mobile'}`}>
+          <h2>Dernière réalisation</h2>
           <h1 className='title'>socoon</h1>
           <Link className='image' to={'projet/freepry'}>
             <img src={mockup}/>
