@@ -9,8 +9,8 @@ export function Lab({mediaQuery816}) {
 
   const settings = {
     infinite: true,
-    speed: 800,
-    slidesToShow: 2,
+    speed: 600,
+    slidesToShow: 1,
     slidesToScroll: 1,
     autoplaySpeed: 500,
   }

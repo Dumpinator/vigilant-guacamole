@@ -6,7 +6,7 @@ import logoF from '/LogoFreepry.svg'
 import logoL from '/LogoLichess.png'
 import logoS from '/LogoSocoon.png'
 import mockupF from '/moke01.jpg'
-import mockupL from '/moke02.jpg'
+import mockupL from '/moke02.png'
 import mockupS from '/moke03.png'
 import './index.scss'
 
@@ -17,7 +17,6 @@ export function Project({ mediaQuery816 }) {
     history.go(-1);
   }
 
-  
   if(slug === 'freepry') {
     console.log(slug);
     return (<>
@@ -140,7 +139,7 @@ export function Project({ mediaQuery816 }) {
             </div>
             <p className='subtitle'>How to improve the user experience on lichess.org for beginner level players?</p>
           </div>
-          <img src={mockupL} style={{ borderRadius: 0 }}/>
+          <img src={mockupL}/>
         </div>
         <div className="contexte">
           <div className="contexte__title">Contexte</div>

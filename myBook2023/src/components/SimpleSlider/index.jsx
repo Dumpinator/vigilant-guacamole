@@ -2,7 +2,9 @@ import React from "react"
 import { Link } from "react-router-dom"
 import { Btn } from '../../components/Btn'
 import Slider from "react-slick"
-import mockup from '../../assets/mockup.png'
+import mockupF from '../../assets/mockup01.png'
+import mockupL from '../../assets/mockup02.png'
+import mockupS from '../../assets/mockup03.png'
 import './styles.scss'
 
 export const SimpleSlider = ({mediaQuery816}) => {
@@ -23,7 +25,7 @@ export const SimpleSlider = ({mediaQuery816}) => {
           <h2>Dernière réalisation</h2>
           <h1 className='title'>freepry</h1>
           <Link className='image' to={'projet/freepry'}>
-            <img src={mockup}/>
+            <img src={mockupF}/>
           </Link>
           <p className='subtitle'>Refonte de l’onglet “reprise d’un article”</p>
           <div className='cta'>
@@ -42,7 +44,7 @@ export const SimpleSlider = ({mediaQuery816}) => {
           <h2>Dernière réalisation</h2>
           <h1 className='title'>lichess</h1>
           <Link className='image' to={'projet/freepry'}>
-            <img src={mockup}/>
+            <img src={mockupL}/>
           </Link>
           <p className='subtitle'>Refonte du plateau de jeu </p>
           <div className='cta'>
@@ -57,11 +59,11 @@ export const SimpleSlider = ({mediaQuery816}) => {
           </div>
         </div>
 
-        <div className={`container${ mediaQuery816 ? '' : ' mobile'}`}>
+        <div className={`container${ mediaQuery816 ? '' : ' mobile'} bg-socoon`}>
           <h2>Dernière réalisation</h2>
           <h1 className='title'>socoon</h1>
           <Link className='image' to={'projet/freepry'}>
-            <img src={mockup}/>
+            <img src={mockupS}/>
           </Link>
           <p className='subtitle'>Refonte du parcours d’inscription</p>
           <div className='cta'>

@@ -1,6 +1,8 @@
 import { Link } from "react-router-dom"
 import { Footer } from '../../components/Footer/index.jsx'
-import mockup from '../../assets/mockup.png'
+import mockupF from '../../assets/mockup01.png'
+import mockupL from '../../assets/mockup02.png'
+import mockupS from '../../assets/mockup03.png'
 import './index.scss'
 
 export function Projects({mediaQuery816}) {
@@ -11,7 +13,7 @@ export function Projects({mediaQuery816}) {
         <div className={`container${ mediaQuery816 ? '' : ' mobile'} bg-freepry`}>
           <h1 className='title'>freepry</h1>
           <Link className='image' to={'/projet/freepry'}>
-            <img src={mockup}/>
+            <img src={mockupF}/>
           </Link>
           <p className='subtitle'>Refonte de l’onglet “reprise d’un article”</p>
           <div className='cta'>
@@ -27,7 +29,7 @@ export function Projects({mediaQuery816}) {
         <div className={`container${ mediaQuery816 ? '' : ' mobile'} bg-lichess`}>
           <h1 className='title'>lichess</h1>
           <Link className='image' to={'/projet/lichess'}>
-            <img src={mockup}/>
+            <img src={mockupL}/>
           </Link>
           <p className='subtitle'>Refonte du plateau de jeu </p>
           <div className='cta'>
@@ -43,7 +45,7 @@ export function Projects({mediaQuery816}) {
         <div className={`container${ mediaQuery816 ? '' : ' mobile'}`}>
           <h1 className='title'>socoon</h1>
           <Link className='image' to={'/projet/socoon'}>
-            <img src={mockup}/>
+            <img src={mockupS}/>
           </Link>
           <p className='subtitle'>Refonte du parcours d’inscription</p>
           <div className='cta'>

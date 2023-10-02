@@ -20,7 +20,7 @@ export function About({mediaQuery816}) {
       text: "Je me suis imprégnée du rythme soutenu de l’agence avec des projets diversifiés, des clients différents et un service organisé.  C’est aussi un milieu où je me suis davantage spécialisée dans le design d’interfaces.",
       icon: "star",
       tags: [],
-      color: "#62B6AB"
+      color: "#EFC644"
     }
   ])
 
