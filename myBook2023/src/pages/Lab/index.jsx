@@ -1,8 +1,11 @@
 import Slider from "react-slick"
 import { Card } from '../../components/Card'
 import { Footer } from '../../components/Footer/index.jsx'
-import c01 from "/c01.png"
-import c02 from "/c02.png"
+import c01 from "/slide01.jpg"
+import c02 from "/slide02.jpg"
+import c03 from "/slide03.jpg"
+import c04 from "/slide04.jpg"
+
 import './index.scss'
 
 export function Lab({mediaQuery816}) {
@@ -25,30 +28,35 @@ export function Lab({mediaQuery816}) {
               </p>
               <h1>The Cacatoes Theory</h1>
               <Slider {...settings}>
+
                 <div className={`container${ mediaQuery816 ? '' : ' mobile'}`}>
                   <div className='slid'>
-                    <Card bg={c01}>
-
-                    </Card>
-                    <h2 className="details">Chasse aux trésors</h2>
+                    <Card bg={c01}></Card>
+                    <h2 className="details"></h2>
                   </div>
                 </div>
+
                 <div className={`container${ mediaQuery816 ? '' : ' mobile'}`}>
                   <div className='slid'>
-                    <Card bg={c02}>
-
-                    </Card>
-                    <h2 className="details">Modale de paiement </h2>
+                    <Card bg={c02}></Card>
+                    <h2 className="details"></h2>
                   </div>
                 </div>
+
                 <div className={`container${ mediaQuery816 ? '' : ' mobile'}`}>
                   <div className='slid'>
-                    <Card >
-
-                    </Card>
-                    <h2 className="details">Chasse aux trésors</h2>
+                    <Card bg={c03}></Card>
+                    <h2 className="details"></h2>
                   </div>
                 </div>
+
+                <div className={`container${ mediaQuery816 ? '' : ' mobile'}`}>
+                  <div className='slid'>
+                    <Card bg={c04}></Card>
+                    <h2 className="details"></h2>
+                  </div>
+                </div>
+
               </Slider>
             </div>
           </div>

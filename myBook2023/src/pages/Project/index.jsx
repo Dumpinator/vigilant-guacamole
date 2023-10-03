@@ -18,13 +18,12 @@ export function Project({ mediaQuery816 }) {
   }
 
   if(slug === 'freepry') {
-    console.log(slug);
+   
     return (<>
       <div className='project__container'>
 
         <div className="top">
           <MdKeyboardArrowLeft onClick={handleBack}/>
-          <p>Retour aux projets</p>
         </div>
 
         <div className={'container'+`${ mediaQuery816 ? '' : ' mobile'} bg-${slug}`}>
@@ -77,7 +76,6 @@ export function Project({ mediaQuery816 }) {
 
         <div className="top">
           <MdKeyboardArrowLeft onClick={handleBack}/>
-          <p>Retour aux projets</p>
         </div>
 
         <div className={'container'+`${ mediaQuery816 ? '' : ' mobile'} bg-${slug}`}>
@@ -129,7 +127,6 @@ export function Project({ mediaQuery816 }) {
 
         <div className="top">
           <MdKeyboardArrowLeft onClick={handleBack}/>
-          <p>Retour aux projets</p>
         </div>
 
         <div className={'container'+`${ mediaQuery816 ? '' : ' mobile'} bg-${slug}`}>
