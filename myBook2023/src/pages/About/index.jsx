@@ -46,7 +46,9 @@ export function About({mediaQuery816}) {
                   Avant de m’immerger dans l’univers du design en 2018, je démarre ma carrière professionnelle en tant que travailleur social.
                 </p>
                 <p className='custom'>
-                  Très vite, je démarre une reconversion professionnelle car j’aspire à un <span>métier artistique</span>. L’informatique est aussi un domaine qui m’a toujours passionnée et 
+                  Très vite, je démarre une reconversion professionnelle car j’aspire à un <span>métier artistique</span>.</p>
+                  <p>
+                   L’informatique est aussi un domaine qui m’a toujours passionnée et 
                   je prends vite conscience de l’évolution qui peut s’offrir à moi dans ce domaine. Je ne réfléchis pas trop longtemps, je saute le pas !
                 </p>
                 <p>

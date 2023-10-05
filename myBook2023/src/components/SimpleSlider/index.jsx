@@ -27,7 +27,7 @@ export const SimpleSlider = ({mediaQuery816}) => {
           <Link className='image' to={'projet/freepry1'}>
             <img src={mockupF1}/>
           </Link>
-          <p className='subtitle'>Création d’un back-office</p>
+          <p className='subtitle'>Refonte de l’onglet “reprise d’un article”</p>
           <div className='cta'>
             <div className='description'>
               <div className='name'>freepry</div>
@@ -47,7 +47,7 @@ export const SimpleSlider = ({mediaQuery816}) => {
           <Link className='image' to={'projet/freepry2'}>
             <img src={mockupF2}/>
           </Link>
-          <p className='subtitle'>Refonte de l’onglet “reprise d’un article”</p>
+          <p className='subtitle'>Création d’un back-office</p>
           <div className='cta'>
             <div className='description'>
               <div className='name'>freepry</div>
