@@ -22,10 +22,26 @@
             margin-top: 100px;
 
             .hero {
+                
                 max-width: 636px;
                 max-height: 512px;
                 margin-bottom: 5em;
+
+              .brand {
+                display: flex;
+                flex-wrap: wrap;
+                position: relative;
+
+                svg {
+                    transform: rotateX('30deg ');
+                    position: absolute;
+                    top: 60px;
+                    color: #DD69D1;
+                    font-size: 2em;
+                }
+
                 p {
+                    padding-left: 60px;
                     color: #171D1C;
                     font-family: Karla;
                     font-size: 20px;
@@ -33,7 +49,8 @@
                     font-weight: 600;
                     line-height: 150%; /* 30px */
                 }
-
+              }
+                
                 h1 {
                     margin: 0;
                     color: var(--Black, #22162B);
@@ -166,6 +183,7 @@
                 display: flex;
                 flex-direction: column;
                 align-items: center;
+                justify-content: center;
                 
                 .row {
                     width: 100%;
@@ -185,21 +203,33 @@
                 flex-direction: column;
                 max-width: 50%;
                 min-height:600px;
-
+                margin-bottom: 3em;
                 .text {
                     display: flex;
                     flex-direction: column;
                     justify-content: center;
-                    align-items: center;
+           
 
                     p {
-                        max-width: 60%;
+                        max-width: 90%;
                         color: #171D1C;
                         font-family: Karla;
                         font-size: 20px;
                         font-style: normal;
                         font-weight: 600;
                         line-height: 150%; /* 30px */
+                    }
+                    .custom {
+                        color: var(--Black, #22162B);
+                        font-family: Karla;
+                        font-size: 18px;
+                        font-style: normal;
+                        font-weight: 800;
+                        line-height: 200%; /* 36px */
+
+                        span {
+                            color: #DD69D1;
+                        }
                     }
                 }
             } .right.mobile { max-width: 80%; text-align: center;}

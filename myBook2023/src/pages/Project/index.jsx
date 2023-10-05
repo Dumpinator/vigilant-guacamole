@@ -17,15 +17,12 @@ export function Project({ mediaQuery816 }) {
     history.go(-1);
   }
 
-  if(slug === 'freepry') {
-   
+  if(slug === 'freepry1') {
     return (<>
       <div className='project__container'>
-
         <div className="top">
           <MdKeyboardArrowLeft onClick={handleBack}/>
         </div>
-
         <div className={'container'+`${ mediaQuery816 ? '' : ' mobile'} bg-${slug}`}>
           <div className="header">
             <div className="logo">
@@ -65,19 +62,15 @@ export function Project({ mediaQuery816 }) {
             <p className="schema__text">Améliorer la V1 en apportant des solutions aux frictions rencontrées</p>
           </div>
         </div>
-
         <Footer mediaQuery816={mediaQuery816} />
       </div>
     </>)
   } else if(slug === 'freepry2') {
-    
     return (<>
       <div className='project__container'>
-
         <div className="top">
           <MdKeyboardArrowLeft onClick={handleBack}/>
         </div>
-
         <div className={'container'+`${ mediaQuery816 ? '' : ' mobile'} bg-${slug}`}>
           <div className="header">
             <div className="logo">
@@ -116,19 +109,15 @@ export function Project({ mediaQuery816 }) {
             <p className="schema__text">Améliorer la V1 en apportant des solutions aux frictions </p>
           </div>
         </div>
-
         <Footer mediaQuery816={mediaQuery816} />
       </div>
     </>)
   } else if(slug === 'lichess') {
-
     return (<>
       <div className='project__container'>
-
         <div className="top">
           <MdKeyboardArrowLeft onClick={handleBack}/>
         </div>
-
         <div className={'container'+`${ mediaQuery816 ? '' : ' mobile'} bg-${slug}`}>
           <div className="header">
             <div className="logo">
@@ -167,20 +156,16 @@ export function Project({ mediaQuery816 }) {
             <p className="schema__text">Améliorer la V1 en apportant des solutions aux frictions rencontrées</p>
           </div>
         </div>
-
         <Footer mediaQuery816={mediaQuery816} />
       </div>
     </>)
   } else if(slug === 'socoon') {
-
     return (<>
       <div className='project__container'>
-
         <div className="top">
           <MdKeyboardArrowLeft onClick={handleBack}/>
           <p>Retour aux projets</p>
         </div>
-
         <div className={'container'+`${ mediaQuery816 ? '' : ' mobile'} bg-${slug}`}>
           <div className="header">
             <div className="logo">
@@ -219,7 +204,6 @@ export function Project({ mediaQuery816 }) {
             <p className="schema__text">Améliorer la V1 en apportant des solutions aux frictions rencontrées</p>
           </div>
         </div>
-
         <Footer mediaQuery816={mediaQuery816} />
       </div>
     </>)

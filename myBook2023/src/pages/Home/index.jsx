@@ -2,6 +2,7 @@ import { useState } from 'react'
 import { Card } from '../../components/Card'
 import {SimpleSlider} from '../../components/SimpleSlider'
 import { Footer } from '../../components/Footer/index.jsx'
+import { BsFillChatQuoteFill } from 'react-icons/bs'
 import './index.scss'
 
 export function Home({mediaQuery816}) {
@@ -37,9 +38,13 @@ export function Home({mediaQuery816}) {
             <div className='hero'>
               <h1>DESIGNER</h1>
               <h1>UX & UI</h1>
-              <p>Hello, moi c’est Delphine et je vous souhaite la bienvenue !</p>
-              <p>Passionnée de design et d'interfaces.</p>
-              <p>Je vous laisse découvrir mon univers et mon parcours.</p>
+              <div className='brand'>
+                <BsFillChatQuoteFill />
+                <p>
+                  J’aime adopter une approche allant de l’analyse à la résolution de problèmes. 
+                  Je cherche à comprendre le comportement des utilisateurs et apprendre les meilleures pratiques UX.
+                </p>
+              </div>
             </div>
             <div className='popup'>
                   <img src='picture.png'/>
@@ -70,16 +75,18 @@ export function Home({mediaQuery816}) {
           <div className={`right${ mediaQuery816 ? '' : ' mobile'}`}>
           <h2>J’apporte mon pixel à l’édifice</h2>
             <div className='text'>
-              <p>Durant mes dernières expériences professionnelles, j'ai travaillé essentiellement sur des produits de type SAAS. Pour la plupart des missions qui m’ont été 
-                confiées, il s’agissait de me focaliser sur une refonte partielle ou totale d’un ou plusieurs parcours utilisateurs. Pour les utilisateurs, je devais réaliser 
-                des interfaces qui puissent répondre à des problématiques majeures et proposer une navigation simple et intuitive.</p>
-              <p>J’ai mis en place plusieurs plans d’action pour mener à bien l’ensemble de mes projets. Aller à la rencontre des utilisateurs pour mieux comprendre leurs 
-                besoins, créée des prototypages interactifs et fonctionnels dans le but de tester auprès d’eux la faisabilité de nouvelles propositions et itérer lorsque 
-                c’est nécessaire.</p>
-                <p>
-                Afin de faciliter le travail entre les collaborateurs, j’ai pris en charge la création des kits UI. Ces librairies nous ont permis de mieux s’organiser entre 
-                nous. Grâce à une  architecture visuelle complète et détaillée, il était plus facile de suivre en temps réel l’évolution du produit et de ses composants.
-                </p>
+              <p>Durant mes dernières expériences professionnelles, j'ai essentiellement travaillé sur des solutions SAAS. Pour la plupart des missions qui m’ont été confiées, 
+                il s’agissait de me focaliser sur une refonte partielle ou totale d’un ou plusieurs parcours utilisateurs.</p>
+              <p>En tenant compte des bonnes pratiques, des frictions et des besoins clients, l’objectif était de proposer des interfaces simples et intuitives. Pour cela, j’ai mis 
+                en place plusieurs plans d’action afin de mener à bien l’ensemble de mes projets. Aller à la rencontre des utilisateurs au travers d’entretiens, de guérillas tests dans 
+                le but de mieux comprendre leurs besoins. Mais aussi la création des prototypages interactifs et fonctionnels pour rendre l’expérience utilisateur plus immersive.</p>
+              <p>Afin de faciliter le travail entre les collaborateurs, j’ai pris en charge la création des kits UI. Ces librairies nous ont permis de mieux s’organiser entre 
+                nous. Grâce à une  architecture visuelle complète et détaillée, il était plus facile de suivre en temps réel l’évolution du produit et de ses composants.</p>
+              <p className='custom'>La <span>conception</span> passe par la compréhension de nos utilisateurs.</p>
+              <p>Je vise toujours à faciliter le travail avec les développeurs. En créant des kit UI complets, je simplifie nos échanges pour éviter des erreurs de compréhension.</p>
+              <p>J’ai pris en charge la création des kits UI. Ces librairies nous ont permis de mieux s’organiser entre nous. Grâce à une  architecture visuelle complète et détaillée, 
+                il était plus facile de suivre en temps réel l’évolution du produit et de ses composants.</p>
+              <p className='custom'>Le <span>design</span> c’est un travail collaboratif.</p>
             </div>
           </div>
         </div>

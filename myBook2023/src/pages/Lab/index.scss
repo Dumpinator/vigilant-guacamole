@@ -5,7 +5,6 @@
     .section-1 {
         width: 100%;
         min-height: 90vh;
-        background-color: #F7DEF5;
         display: flex;
         justify-content: center;
         padding-top: 4em;
@@ -22,49 +21,66 @@
             .hero {
                 text-align: center;
                 width: 100%;
+                h2 {
+                    color: var(--Black, #22162B);
+                    text-align: center;
+                    font-family: Anton;
+                    font-size: 40px;
+                    font-style: normal;
+                    font-weight: 400;
+                    line-height: normal;
+                    text-transform: uppercase;
+                }
                 .first {
-                    max-width: 86%;
-                    padding: 32px;
-                    color: #171D1C;
+                    color: var(--Black, #22162B);
+                    text-align: center;
                     font-family: Karla;
                     font-size: 20px;
                     font-style: normal;
-                    font-weight: 800;
-                    line-height: 150%; /* 30px */
+                    font-weight: 600;
+                    line-height: 160%; /* 32px */
+                    width: 50%;
+                    margin: 0 auto;
+                    margin-bottom: 4em;
                 }
-                h1 {
-                    margin: 0;
-                    color: var(--Black, #171D1C);
-                    font-family: Karla;
-                    font-size: 120px;
-                    font-style: normal;
-                    font-weight: 800;
-                    line-height: normal;
-                }
-                .slid {
-                    display: flex;
-                    flex-direction: column;
-                    justify-content: center;
-                    align-items: center;
-                    min-height: 720px;
-                    margin: 0 10px;
 
-                    .card {
-                        margin-bottom: 2em;
-
-                        .box__shadow {
-                            min-height:450px;
-                        }
-                    }
-
-                    .details {
-                        color: var(--Black, #22162B);
+                .slider__content {
+                    background-color: #F7DEF5;
+        
+                    h1 {
+                        margin: 0;
+                        color: var(--Black, #171D1C);
                         font-family: Karla;
-                        font-size: 18px;
+                        font-size: 120px;
                         font-style: normal;
                         font-weight: 800;
-                        line-height: 160%; /* 28.8px */
-                        margin: 0;
+                        line-height: normal;
+                    }
+                    .slid {
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: center;
+                        align-items: center;
+                        min-height: 720px;
+                        margin: 0 10px;
+
+                        .card {
+                            margin-bottom: 2em;
+
+                            .box__shadow {
+                                min-height:450px;
+                            }
+                        }
+
+                        .details {
+                            color: var(--Black, #22162B);
+                            font-family: Karla;
+                            font-size: 18px;
+                            font-style: normal;
+                            font-weight: 600;
+                            line-height: 160%; /* 28.8px */
+                            margin: 0;
+                        }
                     }
                 }
             }

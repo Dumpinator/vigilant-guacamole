@@ -43,16 +43,18 @@ export function About({mediaQuery816}) {
               <div className='hero'>
                 <h1>Mon parcours</h1>
                 <p>
-                Avant d’intégrer la Tech et le digital, j’ai commence ma carrière professionnelle en tant que travailleur social.
-                Mais en 2018, je décide de démarrer une reconversion professionnelle et aspire à un nouveau métier.
+                  Avant de m’immerger dans l’univers du design en 2018, je démarre ma carrière professionnelle en tant que travailleur social.
+                </p>
+                <p className='custom'>
+                  Très vite, je démarre une reconversion professionnelle car j’aspire à un <span>métier artistique</span>. L’informatique est aussi un domaine qui m’a toujours passionnée et 
+                  je prends vite conscience de l’évolution qui peut s’offrir à moi dans ce domaine. Je ne réfléchis pas trop longtemps, je saute le pas !
                 </p>
                 <p>
-                  Le web et le design attise rapidement ma curiosité et c’est dans ce domaine que je souhaite développer de nouvelles compétences.
-                  J’intègre pour cela Hetic pour un cursus de 3 ans. J’ai appris toutes les bases et les fondements du web et consolide mon apprentissage au travers des stages et 
-                  une année d’alternance  en fin d’étude.
+                  J’intègre Hetic en 2018 pour un cursus de 3 ans. J’apprends toutes les bases et les fondements du web et je consolide dès ma première année mon apprentissage avec 
+                  des stages en entreprises et une année d’alternance en fin d’étude.
                 </p>
-                <p>
-                  Diplômée en 2022, je démarre mon activité en tant que UX & UI designer.
+                <p className='custom'>
+                  Diplômée en 2022, je démarre ma carrière en tant qu’<span>UX & UI designer</span>.
                 </p>
               </div>
             </div>
@@ -62,17 +64,17 @@ export function About({mediaQuery816}) {
         <div className={`container${ mediaQuery816 ? '' : ' mobile'}`}>
           <div className={`right${ mediaQuery816 ? '' : ' mobile'}`}>
             <div className='text'>
-              <p>J’ai eu l’opportunité de développer mes compétences dans différents secteurs d’activités. 
-                Ces expériences ont étés pour moi, l’occasion de découvrir plusieurs entreprises avec des produits différents
-              </p>
-              <p>Le retail : sensibilisé  les entreprises du textile à l’environnement et l’éco-responsabilité grâce à un outil de gestion de vente et de reprise 
-                de produits de seconde main.
-              </p>
+              <h3>RETAILS</h3>
               <p>
-                Le service :  une application solidaire à destination des séniors et de leurs aidants afin de faciliter les actes de leur vie quotidienne.
+                Sensibilisé des entreprises de la mode à l’environnement et l’éco-responsabilité grâce à un outil de gestion de vente et de reprise de produits de seconde main.
               </p>
+              <h3>SERVICE</h3>
               <p>
-                Le marketing mobile :  accompagné les entreprises dans leurs stratégies marketing grâce à un logiciel de création de jeu concours sur mobile.
+                Une application solidaire à destination des séniors et de leurs aidants afin de faciliter les actes de la vie quotidienne.
+              </p>
+              <h3>MARKETING MOBILE</h3>
+              <p>
+                Accompagnement des entreprises dans leurs stratégies marketing grâce à un logiciel de création de jeu concours sur mobile.
               </p>
             </div>
           </div>

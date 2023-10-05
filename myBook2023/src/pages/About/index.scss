@@ -27,10 +27,22 @@
                 p {
                     color: var(--Black, #22162B);
                     font-family: Karla;
-                    font-size: 20px;
+                    font-size: 18px;
                     font-style: normal;
                     font-weight: 600;
                     line-height: 200%; /* 40px */
+                }
+                .custom {
+                    color: var(--Black, #22162B);
+                    font-family: Karla;
+                    font-size: 18px;
+                    font-style: normal;
+                    font-weight: 800;
+                    line-height: 200%; /* 36px */
+
+                    span {
+                        color: #DD69D1;
+                    }
                 }
 
                 h1 {
@@ -144,12 +156,13 @@
     .section-2 {
         width: 100%;
         min-height: 100vh;
-        background-color: #FDEDFB;
+        background-color: #F7DEF5;
         display: flex;
         flex-direction: column;
 
         h2 {
-            margin-left: 4em;margin-left: 4em;
+            margin-left: 4em;
+            margin-left: 4em;
             margin-top: 3em;
             color: var(--Black, #22162B);
             font-family: Anton;
@@ -190,21 +203,30 @@
                 flex-direction: column;
                 max-width: 50%;
                 min-height:600px;
+                justify-content: center;
+                
 
                 .text {
                     display: flex;
                     flex-direction: column;
                     justify-content: center;
-                    align-items: center;
-
-                    p {
-                        max-width: 60%;
+                    margin-left: 10em;
+                    h3 {
                         color: var(--Black, #22162B);
                         font-family: Karla;
                         font-size: 20px;
                         font-style: normal;
+                        font-weight: 800;
+                        line-height: 160%; /* 32px */
+                    }
+                    p {
+                        max-width: 60%;
+                        color: var(--Black, #22162B);
+                        font-family: Karla;
+                        font-size: 18px;
+                        font-style: normal;
                         font-weight: 600;
-                        line-height: 200%;
+                        line-height: 160%;
                     }
                 }
             } .right.mobile { max-width: 80%; text-align: center;}

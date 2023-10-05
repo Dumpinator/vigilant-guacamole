@@ -23,42 +23,48 @@ export function Lab({mediaQuery816}) {
       <div className='section-1'>
           <div className={`container ${ !mediaQuery816 ? 'mobile' : ''}`}>
             <div className='hero'>
-              <p className='first'>Cette page est dédiée à des projets de dimension plus petite. Je souhaite améliorer mes compétences en UI et 
-                quotidiennement ces projets m’aident à y parvenir. Rien de mieux que de m’initier sur des exercices innovants et ludiques !
+              <h2>le lab</h2>
+              <p className='first'>Cette page est dédiée à des projets de dimension plus petite. Je souhaite améliorer mes compétences en UI et quotidiennement ces projets 
+                m’aident à y parvenir. Rien de mieux que de m’initier sur des exercices innovants et ludiques !
               </p>
-              <h1>The Cacatoes Theory</h1>
-              <Slider {...settings}>
+              <div className="slider__content">
+                  <h1>The Cacatoes Theory</h1>
+                  <Slider {...settings}>
 
-                <div className={`container${ mediaQuery816 ? '' : ' mobile'}`}>
-                  <div className='slid'>
-                    <Card bg={c01}></Card>
-                    <h2 className="details"></h2>
-                  </div>
+                    <div className={`container${ mediaQuery816 ? '' : ' mobile'}`}>
+                      <div className='slid'>
+                        <Card bg={c01}></Card>
+                        <h2 className="details"></h2>
+                      </div>
+                    </div>
+
+                    <div className={`container${ mediaQuery816 ? '' : ' mobile'}`}>
+                      <div className='slid'>
+                        <Card bg={c02}></Card>
+                        <h2 className="details"></h2>
+                      </div>
+                    </div>
+
+                    <div className={`container${ mediaQuery816 ? '' : ' mobile'}`}>
+                      <div className='slid'>
+                        <Card bg={c03}></Card>
+                        <h2 className="details"></h2>
+                      </div>
+                    </div>
+
+                    <div className={`container${ mediaQuery816 ? '' : ' mobile'}`}>
+                      <div className='slid'>
+                        <Card bg={c04}></Card>
+                        <h2 className="details"></h2>
+                      </div>
+                    </div>
+
+                  </Slider>
                 </div>
+              </div>
 
-                <div className={`container${ mediaQuery816 ? '' : ' mobile'}`}>
-                  <div className='slid'>
-                    <Card bg={c02}></Card>
-                    <h2 className="details"></h2>
-                  </div>
-                </div>
 
-                <div className={`container${ mediaQuery816 ? '' : ' mobile'}`}>
-                  <div className='slid'>
-                    <Card bg={c03}></Card>
-                    <h2 className="details"></h2>
-                  </div>
-                </div>
 
-                <div className={`container${ mediaQuery816 ? '' : ' mobile'}`}>
-                  <div className='slid'>
-                    <Card bg={c04}></Card>
-                    <h2 className="details"></h2>
-                  </div>
-                </div>
-
-              </Slider>
-            </div>
           </div>
       </div>
 

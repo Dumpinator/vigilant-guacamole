@@ -3,6 +3,20 @@
 .slick-slider {
 	overflow-x: clip;
 
+	.slick-next:before, .slick-prev:before {
+		color: #22162B;
+		z-index: 1;
+	}
+	// droite
+	.slick-next{
+		right: 300px;
+	}
+	// gauche
+	.slick-prev{
+		left: 200px;
+		z-index: 1;
+	}
+
 	.container {
 		position: relative;
 		display: flex;
@@ -39,7 +53,7 @@
 			font-family: Karla;
 			font-size: 18px;
 			font-style: italic;
-			font-weight: 400;
+			font-weight: 600;
 			line-height: 200%; /* 36px */
 		}
 
@@ -81,8 +95,11 @@
 		}
 
 	}
-	.container.bg-freepry {
-		background-color: #FDEDFB;
+	.container.bg-freepry1 {
+		background-color: #F7DEF5;
+	}
+	.container.bg-freepry2 {
+		background-color: #FEF8EC;
 	}
 	.container.bg-lichess {
 		background-color: #E2E4F3;
@@ -90,7 +107,6 @@
 	.container.bg-socoon {
 		background-color: #DCF5F9;
 	}
-
 	.slick-dots { margin-bottom: 30vh; }
 	.container.mobile {  }
 }
