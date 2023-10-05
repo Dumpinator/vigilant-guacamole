@@ -64,7 +64,7 @@ export const SimpleSlider = ({mediaQuery816}) => {
         <div className={`container${ mediaQuery816 ? '' : ' mobile'} bg-lichess`}>
           <h2>Dernières réalisations</h2>
           <h1 className='title'>lichess</h1>
-          <Link className='image' to={'projet/freepry'}>
+          <Link className='image' to={'projet/lichess'}>
             <img src={mockupL}/>
           </Link>
           <p className='subtitle'>Refonte du plateau de jeu </p>
@@ -84,7 +84,7 @@ export const SimpleSlider = ({mediaQuery816}) => {
         <div className={`container${ mediaQuery816 ? '' : ' mobile'} bg-socoon`}>
           <h2>Dernières réalisations</h2>
           <h1 className='title'>socoon</h1>
-          <Link className='image' to={'projet/freepry'}>
+          <Link className='image' to={'projet/socoon'}>
             <img src={mockupS}/>
           </Link>
           <p className='subtitle'>Refonte du parcours d’inscription</p>
