@@ -5,9 +5,10 @@ import { Footer } from '../../components/Footer/index.jsx'
 import logoF from '/LogoFreepry.svg'
 import logoL from '/LogoLichess.png'
 import logoS from '/LogoSocoon.png'
-import mockupF from '/moke01.jpg'
-import mockupL from '/moke02.png'
-import mockupS from '/moke03.png'
+import mockupF1 from '/moke01.jpg'
+import mockupF2 from '/moke02.png'
+import mockupL from '/moke03.png'
+import mockupS from '/moke04.png'
 import './index.scss'
 
 export function Project({ mediaQuery816 }) {
@@ -30,7 +31,7 @@ export function Project({ mediaQuery816 }) {
             </div>
             <p className='subtitle'>Comment simplifier le parcours de reprise d’un produit ?</p>
           </div>
-          <img src={mockupF}/>
+          <img src={mockupF1}/>
         </div>
         <div className="contexte">
           <div className="contexte__title">Contexte</div>
@@ -78,7 +79,7 @@ export function Project({ mediaQuery816 }) {
             </div>
             <p className='subtitle'>Création d’un back-office permettant aux boutiques de gérer leur marketplace</p>
           </div>
-          <img src={mockupF}/>
+          <img src={mockupF2}/>
         </div>
         <div className="contexte">
           <div className="contexte__title">Contexte</div>
