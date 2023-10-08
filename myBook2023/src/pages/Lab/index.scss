@@ -43,12 +43,13 @@
                     margin: 0 auto;
                     margin-bottom: 4em;
                 }
+               
 
                 .slider__content {
+                    padding-top: 2em;
                     background-color: #F7DEF5;
-        
                     h1 {
-                        margin: 0;
+                        margin-top: 3em 0;
                         color: var(--Black, #171D1C);
                         font-family: Karla;
                         font-size: 120px;

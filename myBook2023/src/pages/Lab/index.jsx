@@ -28,7 +28,7 @@ export function Lab({mediaQuery816}) {
                 m’aident à y parvenir. Rien de mieux que de m’initier sur des exercices innovants et ludiques !
               </p>
               <div className="slider__content">
-                  <h1>The Cacatoes Theory</h1>
+                <h1>The Cacatoes Theory</h1>
                   <Slider {...settings}>
 
                     <div className={`container${ mediaQuery816 ? '' : ' mobile'}`}>
@@ -62,9 +62,6 @@ export function Lab({mediaQuery816}) {
                   </Slider>
                 </div>
               </div>
-
-
-
           </div>
       </div>
 
