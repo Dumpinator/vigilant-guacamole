@@ -48,6 +48,12 @@
                 .slider__content {
                     padding-top: 2em;
                     background-color: #F7DEF5;
+
+                    .slick-slider .slick-prev:before,
+                    .slick-slider .slick-next:before {
+                        color: #DD69D1;
+                    }
+
                     h1 {
                         margin-top: 3em 0;
                         color: var(--Black, #171D1C);
@@ -93,5 +99,9 @@
                 }
             }
         }
+    }
+
+    .section-2 {
+        
     }
 }

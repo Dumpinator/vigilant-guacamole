@@ -1,11 +1,13 @@
 import Slider from "react-slick"
+import { Link } from "react-router-dom"
 import { Card } from '../../components/Card'
 import { Footer } from '../../components/Footer/index.jsx'
+import { CgFigma } from 'react-icons/cg'
 import c01 from "/slide01.jpg"
 import c02 from "/slide02.jpg"
 import c03 from "/slide03.jpg"
 import c04 from "/slide04.jpg"
-
+import mockupC from '../../assets/mockupLab01.png'
 import './index.scss'
 
 export function Lab({mediaQuery816}) {
@@ -20,6 +22,7 @@ export function Lab({mediaQuery816}) {
 
   return (
     <div className='lab__container'>
+
       <div className='section-1'>
           <div className={`container ${ !mediaQuery816 ? 'mobile' : ''}`}>
             <div className='hero'>
@@ -63,6 +66,17 @@ export function Lab({mediaQuery816}) {
                 </div>
               </div>
           </div>
+      </div>
+
+      <div className='section-2'>
+        <div className='projects__container'>
+          <div className={`container${ mediaQuery816 ? '' : ' mobile'} bg-freepry1`}>
+            <h1 className='title'>cemantix</h1>
+            <div className='image'>
+              <img src={mockupC}/>
+            </div>
+          </div>
+        </div>
       </div>
 
      <Footer mediaQuery816={mediaQuery816} />
