@@ -42,17 +42,11 @@ export function About({mediaQuery816}) {
               </div>
               <div className='hero'>
                 <h1>Mon parcours</h1>
-                <p>
-                  Avant de m’immerger dans l’univers du design en 2018, je démarre ma carrière professionnelle en tant que travailleur social.
+                 <p className='custom'> En 2018, je me suis reconvertie dans le design car j'aspirais à un métier plus <span>artistique et créatif</span>.
                 </p>
-                <p className='custom'>
-                  Très vite, je démarre une reconversion professionnelle car j’aspire à un <span>métier artistique</span>.</p>
-                  <p>
-                   L’informatique est aussi un domaine qui m’a toujours passionnée et 
-                  je prends vite conscience de l’évolution qui peut s’offrir à moi dans ce domaine. Je ne réfléchis pas trop longtemps, je saute le pas !
-                </p>
+                <p> Le digital étant le secteur proposant le plus d'opportunités, je me suis naturellement tournée vers le design d'interface.</p>
                 <p>
-                  J’intègre Hetic en 2018 pour un cursus de 3 ans. J’apprends toutes les bases et les fondements du web et je consolide dès ma première année mon apprentissage avec 
+                  J’intègre Hetic en 2018 pour un cursus de 3 ans. J’apprends toutes les bases et les fondements du web et je consolide dès ma première année, mon apprentissage avec 
                   des stages en entreprises et une année d’alternance en fin d’étude.
                 </p>
                 <p className='custom'>

@@ -80,9 +80,9 @@ export function Home({mediaQuery816}) {
               <p>En tenant compte des bonnes pratiques, des frictions et des besoins clients, l’objectif était de proposer des interfaces simples et intuitives. Pour cela, j’ai mis 
                 en place plusieurs plans d’action afin de mener à bien l’ensemble de mes projets. Aller à la rencontre des utilisateurs au travers d’entretiens, de guérillas tests dans 
                 le but de mieux comprendre leurs besoins. Mais aussi la création des prototypages interactifs et fonctionnels pour rendre l’expérience utilisateur plus immersive.</p>
+              <p className='custom'>La <span>conception</span> passe par la compréhension de nos utilisateurs.</p>
               <p>Afin de faciliter le travail entre les collaborateurs, j’ai pris en charge la création des kits UI. Ces librairies nous ont permis de mieux s’organiser entre 
                 nous. Grâce à une  architecture visuelle complète et détaillée, il était plus facile de suivre en temps réel l’évolution du produit et de ses composants.</p>
-              <p className='custom'>La <span>conception</span> passe par la compréhension de nos utilisateurs.</p>
               <p>Je vise toujours à faciliter le travail avec les développeurs. En créant des kit UI complets, je simplifie nos échanges pour éviter des erreurs de compréhension.</p>
               <p>J’ai pris en charge la création des kits UI. Ces librairies nous ont permis de mieux s’organiser entre nous. Grâce à une  architecture visuelle complète et détaillée, 
                 il était plus facile de suivre en temps réel l’évolution du produit et de ses composants.</p>
