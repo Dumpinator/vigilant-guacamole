@@ -55,7 +55,7 @@ export function Project({ mediaQuery816 }) {
             <p className="schema__text">Création du kit UI et des premiers parcours</p>
           </div>
           <div className="col">
-            <h2 className="schema__title">Users tests</h2>
+            <h2 className="schema__title">Tests utilisateurs </h2>
             <p className="schema__text">Proposition d’un AB Test </p>
           </div>
         </div>
@@ -174,19 +174,19 @@ export function Project({ mediaQuery816 }) {
         <div className="schema">
           <div className="col">
             <h2 className="schema__title">Besoins & frictions</h2>
-            <p className="schema__text">Heuristic analysis, interviews, users tests, insights priorisation, value proposition</p>
+            <p className="schema__text">Audit ergonomique d la V.1</p>
           </div>
           <div className="col">
             <h2 className="schema__title">Inspirations & idéations</h2>
-            <p className="schema__text">Experience map , personas, user flow</p>
+            <p className="schema__text">Veille graphique sur Behance, Dribble</p>
           </div>
           <div className="col">
-            <h2 className="schema__title">Design</h2>
-            <p className="schema__text">Wireframes, interface, prototyping</p>
+            <h2 className="schema__title">Conception</h2>
+            <p className="schema__text">Userflows, wireframes, prototyping de la V.2 et rédaction des hypothèses.</p>
           </div>
           <div className="col">
-            <h2 className="schema__title">Assessment</h2>
-            <p className="schema__text">Users tests of iterative solutions</p>
+            <h2 className="schema__title">Tests utilisateurs</h2>
+            <p className="schema__text">Guérillas tests du parcours d’inscription en vue de tester nos hypothèses.</p>
           </div>
         </div>
         <Footer mediaQuery816={mediaQuery816} />
