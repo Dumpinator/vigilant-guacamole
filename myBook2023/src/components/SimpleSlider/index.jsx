@@ -81,26 +81,6 @@ export const SimpleSlider = ({mediaQuery816}) => {
           </div>
         </div>
 
-        <div className={`container${ mediaQuery816 ? '' : ' mobile'} bg-socoon`}>
-          <h2>Dernières réalisations</h2>
-          <h1 className='title'>socoon</h1>
-          <Link className='image' to={'projet/socoon'}>
-            <img src={mockupS}/>
-          </Link>
-          <p className='subtitle'>Refonte du parcours d’inscription</p>
-          <div className='cta'>
-            <div className='description'>
-              <div className='name'>socoon</div>
-              <div className='details'>Socoon est une application web et mobile mettant en relation des séniors avec des personnes proches de leur domicile. La plateforme permet 
-                la réalisation de services divers (aide aux courses, jardinage, aide à la toilette, aide administrative).
-              </div>
-            </div>
-            <div className='projects'>
-              <Btn text={"Voir tous les projets"} link={"projets"}/>
-            </div>
-          </div>
-        </div>
-
     </Slider >
   );
 }
