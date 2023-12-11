@@ -9,6 +9,7 @@ import mockupF1 from '/moke01.jpg'
 import mockupF2 from '/moke02.png'
 import mockupL from '/moke03.png'
 import mockupS from '/moke04.png'
+import doc03 from '/doc03.jpg'
 import './index.scss'
 
 export function Project({ mediaQuery816 }) {
@@ -145,6 +146,8 @@ export function Project({ mediaQuery816 }) {
             <p className="schema__text">Users tests of iterative solutions</p>
           </div>
         </div>
+        
+        <img src={doc03}/>
         <Footer mediaQuery816={mediaQuery816} />
       </div>
     </>)
@@ -189,6 +192,7 @@ export function Project({ mediaQuery816 }) {
             <p className="schema__text">Guérillas tests du parcours d’inscription en vue de tester nos hypothèses.</p>
           </div>
         </div>
+       
         <Footer mediaQuery816={mediaQuery816} />
       </div>
     </>)
