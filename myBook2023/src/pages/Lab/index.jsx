@@ -8,6 +8,7 @@ import c02 from "/slide02.jpg"
 import c03 from "/slide03.jpg"
 import c04 from "/slide04.jpg"
 import c05 from "/slide05.jpg"
+import c06 from "/slide06.jpg"
 import mockupC from '../../assets/mockupLab01.png'
 import './index.scss'
 
@@ -66,6 +67,13 @@ export function Lab({mediaQuery816}) {
                     <div className={`container${ mediaQuery816 ? '' : ' mobile'}`}>
                       <div className='slid'>
                         <Card bg={c05}></Card>
+                        <h2 className="details"></h2>
+                      </div>
+                    </div>
+
+                    <div className={`container${ mediaQuery816 ? '' : ' mobile'}`}>
+                      <div className='slid'>
+                        <Card bg={c06}></Card>
                         <h2 className="details"></h2>
                       </div>
                     </div>
