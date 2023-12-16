@@ -9,6 +9,8 @@ import mockupF1 from '/moke01.jpg'
 import mockupF2 from '/moke02.png'
 import mockupL from '/moke03.png'
 import mockupS from '/moke04.png'
+import doc01 from '/doc01.jpg'
+import doc02 from '/doc02.jpg'
 import doc03 from '/doc03.jpg'
 import './index.scss'
 
@@ -60,6 +62,7 @@ export function Project({ mediaQuery816 }) {
             <p className="schema__text">Proposition d’un AB Test </p>
           </div>
         </div>
+        <img src={doc01}/>
         <Footer mediaQuery816={mediaQuery816} />
       </div>
     </>)
@@ -103,6 +106,7 @@ export function Project({ mediaQuery816 }) {
             <p className="schema__text">Améliorer la V1 en apportant des solutions aux frictions </p>
           </div>
         </div>
+        <img src={doc02}/>
         <Footer mediaQuery816={mediaQuery816} />
       </div>
     </>)
