@@ -1,10 +1,10 @@
-import React, { useState } from 'react';
-import { ImLinkedin, ImProfile, ImLab } from 'react-icons/im'
+import { useState } from 'react';
+import { ImProfile, ImLab } from 'react-icons/im'
 import { Link } from 'react-router-dom';
 import './styles.scss';
 
 
-export const Icons = ({ icon }) => {
+export const Icons = ({ icon })  => {
 
     const [hover, setHover] = useState(false);
     const [hovered, setHovered] = useState(false);

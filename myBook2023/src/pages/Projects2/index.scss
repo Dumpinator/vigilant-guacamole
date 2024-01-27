@@ -1,16 +1,4 @@
 
-	body {
-		//width: 100vw;
-		//height: 100vh;
-		//background: #151515;
-		//overflow: hidden;
-		//padding: 0;
-		//margin: 0;
-		//display: flex;
-		//justify-content: center;
-		//align-items: center;
-	}
-
 	.example-container {
 		width: 100vw;
 		height: 90vh;
@@ -19,15 +7,52 @@
 		justify-content: start;
 		align-items: center;
 		overflow: hidden;
-	}
+
+		.command {
+			position: relative;
+		}
+
+		.description-container {
+			max-width: 70vw;
+			height: 60%;
+			position: absolute;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			z-index: 1;
+			left: 0;
+			right: 0;
+
+			.description {
+
+				max-width: 40%;
+				font-style: normal;
+				font-weight: 400;
+				h1 {
+					font-family: "Anton", sans-serif;
+					color: var(--color-light-100, #FFF);
+					font-size: 60px;
+					line-height: 60px; /* 109.091% */
+				}
+				p {
+					font-family: "Karla", sans-serif;
+					color: #F0F0F0;
+					font-size: 18px;
+					line-height: 24px; /* 150% */
+				}
+
+			}
+
+		}
+
 
 	.next,
 	.prev {
-		top: calc(80% - 20px);
-		position: absolute;
+		position: relative;
+		margin: 20px;
 		background-color: rgba(255,255,255,0.1);
 		border: 1px solid rgba(255,255,255,0.1);
-		backdrop-filter: blur(30px);
+		backdrop-filter: blur(20px);
 		color: rgba(255,255,255,0.8);
 		border-radius: 30px;
 		width: 40px;
@@ -44,16 +69,11 @@
 		&:hover {
 			background-color: rgba(255,255,255,0.2);
 			transition: 0.5s;
+			transform: scale(1.4);
 		}
 	}
-
-	.next {
-		right: 32%;
-	}
-
-	.prev {
-		left: 62%;
-		transform: scale(-1);
+	.prev span {
+		transform: rotate(180deg);
 	}
 
 	img {
@@ -63,13 +83,15 @@
 		object-fit: cover;
 	}
 
-	.test {
+	.card {
 		position: absolute;
-		bottom: 200px;
+		bottom: 150px;
 		right: 8%;
 		width: 600px;
 		height: 400px;
 		border-radius: 25px;
+		background-color: transparent;
+		box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1);
 	}
 
 	.back {
@@ -90,4 +112,4 @@
 		align-items: center;
 		cursor: pointer;
 	}
-
+}

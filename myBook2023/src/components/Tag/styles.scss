@@ -4,11 +4,12 @@
 .tag {
 	padding: 8px;
 	margin: 0 5px;
-	border-radius: 8px;
-	background-color: #171D1C;
-	color: #FFF;
+	border-radius: 5px;
+	border: 1px solid var(--border-separator-2, #833869);
+	background: var(--Primary-Text, #FF8DCC);
+	color: black;
 	text-align: center;
-	font-family: Karla;
+	font-family: Karla, sans-serif;
 	font-size: 16px;
 	font-style: normal;
 	font-weight: 600;

@@ -4,7 +4,7 @@
 	//margin-top: 4em;
 	display: flex;
 	flex-wrap: wrap;
-	background-color: #171D1C;
+	background-color: #21121D;
 	color: #FFF;
 	padding: 1em;
 	
@@ -17,7 +17,7 @@
 		
 
 		.title {
-			font-family: Karla;
+			font-family: Karla, sans-serif;
 			font-size: 50px;
 			font-style: normal;
 			font-weight: 800;
@@ -27,7 +27,7 @@
 		}
 		.details {
 			max-width: 70%;
-			font-family: Karla;
+			font-family: Karla, sans-serif;
 			font-size: 16px;
 			font-style: italic;
 			font-weight: 500;
@@ -46,7 +46,7 @@
 		.email, .tel, .social {
 			padding: 1em;
 			color: #FFF;
-			font-family: Karla;
+			font-family: Karla, sans-serif;
 			font-size: 16px;
 			font-style: normal;
 			font-weight: 700;
@@ -66,7 +66,7 @@
 
 
 
-	@media screen and (max-width: "634px") {
+	@media screen and (max-width: 634px) {
 
 		.left {
 			.title {

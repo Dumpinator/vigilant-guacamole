@@ -1,3 +1,4 @@
+// eslint-disable-next-line no-unused-vars
 import React, { useEffect } from "react"
 import { Routes, Route } from "react-router-dom"
 import { useMediaQuery } from './hooks/useMediaQuery'
@@ -18,11 +19,10 @@ function App() {
 
   return (
     <Routes>
-      <Route element={<MainLayout /> }>
+      <Route element={<MainLayout mediaQuery816={mediaQuery816}/> }>
         <Route path="/" element={<Home mediaQuery816={mediaQuery816} />} />
         <Route path="/projet/:slug" element={<Project  mediaQuery816={mediaQuery816} />} />
-        <Route path="/projets" element={<Projects  mediaQuery816={mediaQuery816} />} />
-        <Route path="/projets2" element={<Projects2  mediaQuery816={mediaQuery816} />} />
+        <Route path="/projets" element={<Projects2  mediaQuery816={mediaQuery816} />} />
         <Route path="/about" element={<About mediaQuery816={mediaQuery816} />} />
         <Route path="/lelab" element={<Lab mediaQuery816={mediaQuery816} />} />
       </Route>

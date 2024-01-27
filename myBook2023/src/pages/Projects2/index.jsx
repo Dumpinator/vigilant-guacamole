@@ -3,7 +3,6 @@ import { Link } from "react-router-dom"
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { wrap } from "popmotion";
-import { Footer } from '../../components/Footer/index.jsx'
 import './index.scss'
 
 
@@ -51,15 +50,33 @@ const variants2 = {
 };
 
 export const images = [
-    ["/slider01.jpg", "#F7DEF5"],
-    ["/slider02.jpg", "#E2E4F3"],
-    ["/slider03.jpg", "#FEF8EC"]
+    [
+        "/slider01.jpg",
+        "#F7DEF5",
+        "Comment améliorer la reprise d’un produit de seconde main ?",
+        "Freepry c’est la solution destinée aux boutiques pour se lancer dans la seconde main. Elle met à disposition une solution clé en main  permettant d’optimiser la reprise et la revente des produits de seconde main grâce à un algorithme de reprise.",
+        "freepry1"
+    ],
+    [
+        "/slider02.jpg",
+        "#E2E4F3",
+        "Comment simplifier l’expérience de jeu pour les débutants ?",
+        "Lichess.org est une plateforme de jeu d’échecs en ligne open-source et destinée aux passionnés. Il propose plusieurs services à ses utilisateurs : lancement d'une partie, participation à de grands tournois et le suivi des compétitions.",
+        "lichess"
+    ],
+    [
+        "/slider03.jpg",
+        "#FEF8EC",
+        "Créer un outil de visualisation des dépôts et des ventes",
+        "Freepry c’est la solution destinée aux boutiques pour se lancer dans la seconde main. Elle met à disposition une solution clé en main  permettant d’optimiser la reprise et la revente des produits de seconde main grâce à un algorithme de reprise.",
+        "freepry2"
+    ]
 ];
 
 export const images2 = [
-    "https://d33wubrfki0l68.cloudfront.net/dd23708ebc4053551bb33e18b7174e73b6e1710b/dea24/static/images/wallpapers/shared-colors@2x.png",
-    "https://d33wubrfki0l68.cloudfront.net/49de349d12db851952c5556f3c637ca772745316/cfc56/static/images/wallpapers/bridge-02@2x.png",
-    "https://d33wubrfki0l68.cloudfront.net/594de66469079c21fc54c14db0591305a1198dd6/3f4b1/static/images/wallpapers/bridge-01@2x.png"
+    "/step01.png",
+    "/step02.png",
+    "/step03.png"
 ];
 
 /**
@@ -88,6 +105,7 @@ export const Projects2 = () => {
 
     return (
         <div className="example-container">
+
             <AnimatePresence initial={false} custom={direction}>
                 <motion.img
                     key={page}
@@ -98,13 +116,13 @@ export const Projects2 = () => {
                     animate="center"
                     exit="exit"
                     transition={{
-                        y: { type: "spring", stiffness: 300, damping: 30 },
-                        opacity: { duration: 0.2 }
+                        y: {type: "spring", stiffness: 300, damping: 30},
+                        opacity: {duration: 0.2}
                     }}
                     drag="x"
-                    dragConstraints={{ left: 0, right: 0 }}
+                    dragConstraints={{left: 0, right: 0}}
                     dragElastic={1}
-                    onDragEnd={(e, { offset, velocity }) => {
+                    onDragEnd={(e, {offset, velocity}) => {
                         const swipe = swipePower(offset.y, velocity.y);
 
                         if (swipe < -swipeConfidenceThreshold) {
@@ -114,42 +132,62 @@ export const Projects2 = () => {
                         }
                     }}
                 />
+
+                <div className="description-container">
+                    <AnimatePresence>
+                        <motion.div
+                            key={page}
+                            className="description"
+                            initial={{opacity: 0, scale: 0.5}}
+                            whileInView={{opacity: 1, scale: 1}}
+                            transition={{ ease: "easeIn", duration: 0.3 }}
+                        >
+                            <h1>{images[imageIndex][2]}</h1>
+                            <p>{images[imageIndex][3]}</p>
+                        </motion.div>
+                    </AnimatePresence>
+                </div>
             </AnimatePresence>
 
-            <AnimatePresence initial={false} custom={direction}>
-                <motion.img className={"test"}
-                    key={page}
-                    src={images2[imageIndex]}
-                    custom={direction}
-                    variants={variants2}
-                    initial="enter"
-                    animate="center"
-                    exit="exit"
-                    transition={{
-                        x: { type: "spring", stiffness: 300, damping: 30 },
-                        opacity: { duration: 0.2 }
-                    }}
-                    drag="x"
-                    dragConstraints={{ left: 0, right: 0 }}
-                    dragElastic={1}
-                    onDragEnd={(e, { offset, velocity }) => {
-                        const swipe = swipePower(offset.x, velocity.x);
-
-                        if (swipe < -swipeConfidenceThreshold) {
-                            paginate(1);
-                        } else if (swipe > swipeConfidenceThreshold) {
-                            paginate(-1);
-                        }
-                    }}
-                />
-            </AnimatePresence>
-
-            <div className="next" onClick={() => paginate(1)}>
-                {"‣"}
+            <div className="command">
+                <div className="next" onClick={() => paginate(1)}>
+                    <span>{"‣"}</span>
+                </div>
+                <div className="prev" onClick={() => paginate(-1)}>
+                   <span>{"‣"}</span>
+                </div>
             </div>
-            <div className="prev" onClick={() => paginate(-1)}>
-                {"‣"}
-            </div>
+            <Link to={`/projet/${images[imageIndex][4]}`}>
+                <AnimatePresence initial={false} custom={direction}>
+                    <motion.img className={"card"}
+                                key={page}
+                                src={images2[imageIndex]}
+                                custom={direction}
+                                variants={variants2}
+                                initial="enter"
+                                animate="center"
+                                exit="exit"
+                                transition={{
+                                    x: {type: "spring", stiffness: 300, damping: 30},
+                                    opacity: {duration: 0.2}
+                                }}
+                                whileHover={{ scale: 1.1, cursor: "pointer" }}
+                                drag="x"
+                                dragConstraints={{left: 0, right: 0}}
+                                dragElastic={1}
+                                onDragEnd={(e, {offset, velocity}) => {
+                                    const swipe = swipePower(offset.x, velocity.x);
+
+                                    if (swipe < -swipeConfidenceThreshold) {
+                                        paginate(1);
+                                    } else if (swipe > swipeConfidenceThreshold) {
+                                        paginate(-1);
+                                    }
+                                }}
+                    />
+
+                </AnimatePresence>
+            </Link>
 
             <div className="back" style={{
                 position: "absolute",

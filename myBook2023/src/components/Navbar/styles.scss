@@ -7,14 +7,14 @@
 
 $text-black-color: #22162B;
 $text-hover-color: #B72AA9;
-$text-select-color: #DD69D1;
+$text-select-color: #D6409F;
 
 nav {
 	width: 100%;
 	position: sticky;
 	top: 0;
 	z-index: 100;
-	border-bottom: solid 4px #171D1C;
+	//border-bottom: solid 4px #171D1C;
 
 	.menu-mobile {
 		text-transform: uppercase;
@@ -28,14 +28,14 @@ nav {
 		display: none;
 
 		.is-open {
-			-webkit-transform: rotate(360deg);
+			//-webkit-transform: rotate(360deg);
 			transform: rotate(360deg) scale(1.2); ;
 			transition: all 0.3s ease-in-out;
 			color: v.$blue-color;
 		}
 
 		.is-close {
-			-webkit-transform: rotate(-720deg);
+			//-webkit-transform: rotate(-720deg);
 			transform: rotate(-720deg);
 			transition: transform 0.2s ease-in-out;
 			color: v.$pink-color;
@@ -43,7 +43,7 @@ nav {
 	}
 
 	.list {
-		background-color: #fff;
+		background-color: #21121D;
 		display: flex;
 		flex-direction: row;
 		align-items: center;
@@ -56,12 +56,12 @@ nav {
 				justify-content: center;
 				align-items: center;
 				height: 60px;
-
+				margin-left: 1em;
 				h1 {
 					width: 100%;
-					margin-left: 4em;
-					color: var(--Black, #22162B);
-					font-family: Anton;
+					margin-left: 0.5em;
+					color: var(--Black, #fff);
+					font-family: Anton, sans-serif;
 					font-size: 24px;
 					font-style: normal;
 					font-weight: 400;
@@ -75,6 +75,7 @@ nav {
 			padding: 0px;
 			flex-direction: row;
 			display: flex;
+			margin-right: 2em;
 
 			li {
 				display: flex;
@@ -88,8 +89,8 @@ nav {
 					display: flex;
 					text-decoration: none;
 					font-weight: 900;
-					padding: 20px; // détermine la hauteur de nav
-					color: v.$black-color;
+					padding: 30px 20px; // détermine la hauteur de nav
+					color: #fff;
 
 					&:hover {
 						color: $text-hover-color;

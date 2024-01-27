@@ -1,9 +1,11 @@
+// eslint-disable-next-line no-unused-vars
 import React from 'react';
 import { MdSavedSearch, MdBorderColor, MdDesignServices, MdStar } from 'react-icons/md'
-import { Tag } from '../../components/Tag';
-import './styles.scss';
+import { Tag } from '../Tag/index.jsx';
+//import './styles.scss';
 
 
+// eslint-disable-next-line react/prop-types
 export const Card = ({ title, text, icon, tags, color, bg, children }) => {
 
     const customIcon = (icon) => {
@@ -45,6 +47,7 @@ export const Card = ({ title, text, icon, tags, color, bg, children }) => {
                         <p className='text'>{ text }</p>
                         <div className='tags'>
                            {
+                           // eslint-disable-next-line react/prop-types
                             tags?.map(
                                 (text, index) => 
                                     <Tag key={text+index+Date.now()} text={text} />

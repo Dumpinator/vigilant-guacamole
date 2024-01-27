@@ -4,19 +4,25 @@
 		width: 100%;
 		display: flex;
 		align-items: center;
+		background-color: #191117;
+		overflow: hidden;
 
 		svg {
+			//border: 1px solid  #833869;
+			background: #37172F;
 			cursor: pointer;
 			padding: 20px;
+			color: #833869;
 
 			&:hover {
-				transform: scale (1.4);
+				transform: scale(1.4);
+				border-radius: 64%;
 			}
 		}
 
 		p {
 			color: #22162B;
-			font-family: Karla;
+			font-family: Karla, sans-serif;
 			font-size: 18px;
 			font-style: normal;
 			font-weight: 600;
@@ -45,7 +51,7 @@
 				margin: 0 2em;
 				max-width: 50%;
 				color: #22162B;
-				font-family: Karla;
+				font-family: Karla, sans-serif;
 				font-size: 24px;
 				font-style: italic;
 				font-weight: 400;
@@ -73,13 +79,13 @@
 	.container.bg-socoon {
 		background-color: #DCF5F9;
 	}
-
+	background-color: #191117;
 	.contexte {
 		margin: 3em;
 
 		&__title {
-			color: #22162B;
-			font-family: Karla;
+			color: #F2F79E;
+			font-family: Karla, sans-serif;
 			font-size: 24px;
 			font-style: normal;
 			font-weight: 800;
@@ -87,8 +93,8 @@
 		}
 		&__text {
 			margin: 1em 0;
-			color: #22162B;
-			font-family: Karla;
+			color: #fff;
+			font-family: Karla, sans-serif;
 			font-size: 18px;
 			font-style: normal;
 			font-weight: 400;
@@ -105,16 +111,16 @@
 		.col {
 			margin: 0 1em;
 			.schema__title {
-				color: #22162B;
-				font-family: Karla;
+				color: #FF8DCC;
+				font-family: Karla, sans-serif;
 				font-size: 18px;
 				font-style: normal;
 				font-weight: 800;
 				line-height: 160%;
 			}
 			.schema__text {
-				color: #22162B;
-				font-family: Karla;
+				color:  #833869;
+				font-family: Karla, sans-serif;
 				font-size: 16px;
 				font-style: normal;
 				font-weight: 400;

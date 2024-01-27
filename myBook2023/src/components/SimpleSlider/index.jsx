@@ -1,11 +1,9 @@
-import React from "react"
 import { Link } from "react-router-dom"
 import { Btn } from '../../components/Btn'
 import Slider from "react-slick"
 import mockupF1 from '../../assets/mockup01.png'
 import mockupF2 from '../../assets/mockup02.png'
 import mockupL from '../../assets/mockup03.png'
-import mockupS from '../../assets/mockup04.png'
 import './styles.scss'
 
 export const SimpleSlider = ({mediaQuery816}) => {
