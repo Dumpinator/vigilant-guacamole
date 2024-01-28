@@ -1,8 +1,6 @@
 import Slider from "react-slick"
-import { Link } from "react-router-dom"
 import { Card } from '../../components/Card'
 import { Footer } from '../../components/Footer/index.jsx'
-import { CgFigma } from 'react-icons/cg'
 import c01 from "/slide01.jpg"
 import c02 from "/slide02.jpg"
 import c03 from "/slide03.jpg"
@@ -11,6 +9,7 @@ import c05 from "/slide05.jpg"
 import c06 from "/slide06.jpg"
 import mockupC from '../../assets/mockupLab01.png'
 import './index.scss'
+import {Card2} from "../../components/Card2/index.jsx";
 
 export function Lab({mediaQuery816}) {
 
@@ -38,42 +37,42 @@ export function Lab({mediaQuery816}) {
 
                     <div className={`container${ mediaQuery816 ? '' : ' mobile'}`}>
                       <div className='slid'>
-                        <Card bg={c01}></Card>
+                        <Card2 bg={c01}></Card2>
                         <h2 className="details"></h2>
                       </div>
                     </div>
 
                     <div className={`container${ mediaQuery816 ? '' : ' mobile'}`}>
                       <div className='slid'>
-                        <Card bg={c02}></Card>
+                        <Card2 bg={c02}></Card2>
                         <h2 className="details"></h2>
                       </div>
                     </div>
 
                     <div className={`container${ mediaQuery816 ? '' : ' mobile'}`}>
                       <div className='slid'>
-                        <Card bg={c03}></Card>
+                        <Card2 bg={c03}></Card2>
                         <h2 className="details"></h2>
                       </div>
                     </div>
 
                     <div className={`container${ mediaQuery816 ? '' : ' mobile'}`}>
                       <div className='slid'>
-                        <Card bg={c04}></Card>
+                        <Card2 bg={c04}></Card2>
                         <h2 className="details"></h2>
                       </div>
                     </div>
 
                     <div className={`container${ mediaQuery816 ? '' : ' mobile'}`}>
                       <div className='slid'>
-                        <Card bg={c05}></Card>
+                        <Card2 bg={c05}></Card2>
                         <h2 className="details"></h2>
                       </div>
                     </div>
 
                     <div className={`container${ mediaQuery816 ? '' : ' mobile'}`}>
                       <div className='slid'>
-                        <Card bg={c06}></Card>
+                        <Card2 bg={c06}></Card2>
                         <h2 className="details"></h2>
                       </div>
                     </div>
@@ -89,7 +88,7 @@ export function Lab({mediaQuery816}) {
           <div className={`container${ mediaQuery816 ? '' : ' mobile'} bg-freepry1`}>
             <h1 className='title'>cemantix</h1>
             <div className='image'>
-              <img src={mockupC}/>
+              <img src={mockupC} alt="screen"/>
             </div>
           </div>
         </div>

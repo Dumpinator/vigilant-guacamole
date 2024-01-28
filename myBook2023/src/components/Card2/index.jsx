@@ -4,8 +4,8 @@ import './styles.scss';
 
 
 // eslint-disable-next-line react/prop-types
-export const Card2 = ({ title, text, icon, tags, color, children }) => {
-
+export const Card2 = ({ title, text, icon, tags, color, children,bg }) => {
+    console.log(bg)
     const customIcon = (icon) => {
         switch (icon) {
             case 'search':
@@ -32,10 +32,22 @@ export const Card2 = ({ title, text, icon, tags, color, children }) => {
                 </div>
             </div>
             <div className='card__body'>
-                <div className='card__body__text'>
-                    {text}
-                </div>
+                { bg ?
+                    <div className='card__body__text' style={{
+                        backgroundImage: `url(${bg})`,
+                        width: '700px',
+                        height: '700px',
+                        backgroundSize: 'cover',
+                        backgroundPosition: 'center',
+                        borderRadius: '18px',
+                    }}>
 
+                    </div>
+                :
+                    <div className='card__body__text'>
+                        {text}
+                    </div>
+                }
             </div>
             <div className='card__footer'>
 

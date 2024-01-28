@@ -5,11 +5,12 @@
     .section-1 {
         width: 100%;
         min-height: 90vh;
-        background-color: white;
         display: flex;
         justify-content: center;
         align-items: center;
         padding-top: 4em;
+
+        background-color: #191117;
 
         .container {
             display: flex;
@@ -25,16 +26,16 @@
                 //max-height: 512px;
                 margin-bottom: 5em;
                 p {
-                    color: var(--Black, #22162B);
-                    font-family: Karla;
+                    color: var(--Black, #FFF);
+                    font-family: Karla, sans-serif;
                     font-size: 18px;
                     font-style: normal;
                     font-weight: 600;
                     line-height: 200%; /* 40px */
                 }
                 .custom {
-                    color: var(--Black, #22162B);
-                    font-family: Karla;
+                    color: var(--Black, #FFF);
+                    font-family: Karla, sans-serif;
                     font-size: 18px;
                     font-style: normal;
                     font-weight: 800;
@@ -47,8 +48,8 @@
 
                 h1 {
                     margin: 0;
-                    color: var(--Black, #22162B);
-                    font-family: Anton;
+                    color: var(--Black, #F2F79E);
+                    font-family: Anton, sans-serif;
                     font-size: 40px;
                     font-style: normal;
                     font-weight: 400;
@@ -90,8 +91,6 @@
                     background-color: #FFDA44;
                     border-radius: 32px;
                     box-sizing: border-box;
-                    -moz-box-sizing: border-box;
-                    -webkit-box-sizing: border-box;
                     border: white solid 10px;
                 }
                 .popup__cach {
@@ -144,7 +143,7 @@
                 }
             }
         }
-        @media screen and (max-width: "634px") {
+        @media screen and (max-width: 634px) {
             .container {
                 .hero {
                     padding: 20px;
@@ -156,16 +155,15 @@
     .section-2 {
         width: 100%;
         min-height: 100vh;
-        background-color: #F7DEF5;
+        background-color: #191117;
         display: flex;
         flex-direction: column;
 
         h2 {
             margin-left: 4em;
-            margin-left: 4em;
             margin-top: 3em;
-            color: var(--Black, #22162B);
-            font-family: Anton;
+            color: var(--Black, #F2F79E);
+            font-family: Anton, sans-serif;
             font-size: 40px;
             font-style: normal;
             font-weight: 800;
@@ -212,25 +210,28 @@
                     justify-content: center;
                     margin-left: 10em;
                     h3 {
-                        color: var(--Black, white);
-                        background-color: #171D1C;
+
                         width: fit-content;
-                        padding: 5px 10px;
-                        border-radius: 15px;
-                        font-family: Karla;
-                        font-size: 20px;
+                        padding: 8px;
+                        margin: 0 5px;
+                        border-radius: 5px;
+                        border: 1px solid var(--border-separator-2, #833869);
+                        background: var(--Primary-Text, #FF8DCC);
+                        color: black;
+                        text-align: center;
+                        font-family: Karla, sans-serif;
+                        font-size: 16px;
                         font-style: normal;
-                        font-weight: 800;
-                        line-height: 160%; /* 32px */
+                        font-weight: 600;
+                        line-height: normal;
                     }
                     p {
-                        max-width: 60%;
-                        color: var(--Black, #22162B);
-                        font-family: Karla;
+                        color: #FDD1EA;
+                        font-family: Karla, sans-serif;
                         font-size: 18px;
                         font-style: normal;
                         font-weight: 600;
-                        line-height: 160%;
+                        line-height: 160%; /* 28.8px */
                     }
                 }
             } .right.mobile { max-width: 80%; text-align: center;}
@@ -245,8 +246,7 @@
             text-align: center;
             margin: 1em;
             color: var(--Black, #22162B);
-            text-align: center;
-            font-family: A;
+            font-family: Anton, sans-serif;
             font-size: 40px;
             font-style: normal;
             font-weight: 800;
