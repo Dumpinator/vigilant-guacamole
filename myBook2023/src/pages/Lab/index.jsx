@@ -1,5 +1,4 @@
 import Slider from "react-slick"
-import { Card } from '../../components/Card'
 import { Footer } from '../../components/Footer/index.jsx'
 import c01 from "/slide01.jpg"
 import c02 from "/slide02.jpg"
@@ -11,6 +10,7 @@ import mockupC from '../../assets/mockupLab01.png'
 import './index.scss'
 import {Card2} from "../../components/Card2/index.jsx";
 
+// eslint-disable-next-line react/prop-types
 export function Lab({mediaQuery816}) {
 
   const settings = {

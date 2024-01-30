@@ -1,13 +1,13 @@
 import {useState} from 'react'
 import {Card2} from "../../components/Card2/index.jsx";
 import {Footer} from '../../components/Footer/index.jsx'
-import moi from '../../assets/moi.jpg';
 import './index.scss'
 
+// eslint-disable-next-line react/prop-types
 export function About({mediaQuery816}) {
 
 
-    const [cards, setCards] = useState([
+    const [cards] = useState([
         {
             title: "Côté Startup",
             text: "L’expérience en startup m’a permis de devenir plus autonome et de mieux gérer les contraintes. C’est  un environnement challengeant où j’ai pu être force de proposition dans les projets entrepris.",
@@ -28,17 +28,8 @@ export function About({mediaQuery816}) {
         <div className='about__container'>
             <div className='section-1'>
                 <div className={`container ${!mediaQuery816 ? 'mobile' : ''}`}>
-                    <div className='popup'>
-                        <img src={moi}/>
-                        <div className='background__img'/>
-                        <div className='popup__cach'>
-                            <div className='toto'>
-                                <div className='to'></div>
-                            </div>
-                            <div className='tutu'>
-                                <div className='tu'></div>
-                            </div>
-                        </div>
+                    <div className='test'>
+                        <img src={'/about.png'}/>
                     </div>
                     <div className='hero'>
                         <h1>Mon parcours</h1>
