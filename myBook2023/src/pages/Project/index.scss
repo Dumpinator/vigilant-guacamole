@@ -29,6 +29,7 @@
 			line-height: 160%;
 		}
 	}
+
     .container {
 		display: flex;
 
@@ -67,8 +68,9 @@
 		}
 
 	}
+	// background du slide
 	.container.bg-freepry1 {
-		background: var(--gradient, linear-gradient(86deg, #D9F2E9 0%, #E1EBFE 100%));
+		background-color: #C4F5E0;
 	}
 	.container.bg-freepry2 {
 		background-color: #FEF8EC;
@@ -79,23 +81,39 @@
 	.container.bg-socoon {
 		background-color: #DCF5F9;
 	}
-	background-color: #191117;
+
 	.contexte {
 		margin: 3em;
 
 		&__title {
-			color: #F2F79E;
+
 			font-family: Karla, sans-serif;
 			font-size: 24px;
 			font-style: normal;
 			font-weight: 800;
 			line-height: 160%;
 		}
+		.color-freepry1 {
+			color: #87ebd5;
+		}
+		.color-freepry2 {
+			color: #ff801f;
+		}
+		.color-lichess {
+			color: #aadafe;
+		}
+
+
+
+
+
+
+
 		&__text {
 			margin: 1em 0;
 			color: #fff;
 			font-family: Karla, sans-serif;
-			font-size: 18px;
+			font-size: 16px;
 			font-style: normal;
 			font-weight: 400;
 			line-height: 160%;
@@ -118,8 +136,17 @@
 				font-weight: 800;
 				line-height: 160%;
 			}
+			.title-freepry1 {
+				color: #87ebd5;
+			}
+			.title-lichess {
+				color: #aadafe;
+			}
+			.title-freepry2 {
+				color: #ff801f;
+			}
 			.schema__text {
-				color:  #833869;
+				color:  #FFF;
 				font-family: Karla, sans-serif;
 				font-size: 16px;
 				font-style: normal;
@@ -133,4 +160,15 @@
 	img {
 		width: 100%;
 	}
+}
+// backgroung générale
+.bg-freepry1 {
+	background-color: #0f1b1b;
+}
+.bg-freepry2 {
+	background-color: #17120e;
+}
+.bg-lichess {
+	background-color: #262835;
+;
 }
