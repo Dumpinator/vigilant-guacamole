@@ -3,7 +3,6 @@ import { Footer } from '../../components/Footer/index.jsx'
 import mockupF1 from '../../assets/mockup01.png'
 import mockupF2 from '../../assets/mockup02.png'
 import mockupL from '../../assets/mockup03.png'
-import mockupS from '../../assets/mockup04.png'
 import './index.scss'
 
 export function Projects({mediaQuery816}) {

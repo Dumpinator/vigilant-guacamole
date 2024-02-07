@@ -75,7 +75,7 @@ export const images = [
 
 export const images2 = [
     "/step01.png",
-    "/step02.png",
+    "/step02.jpg",
     "/step03.png"
 ];
 

@@ -4,7 +4,6 @@ import { Routes, Route } from "react-router-dom"
 import { useMediaQuery } from './hooks/useMediaQuery'
 import { MainLayout } from './layouts/MainLayout'
 import { Home } from './pages/Home'
-import { Projects } from './pages/Projects'
 import { Project } from './pages/Project'
 import { About } from "./pages/About"
 import { Lab } from "./pages/lab"

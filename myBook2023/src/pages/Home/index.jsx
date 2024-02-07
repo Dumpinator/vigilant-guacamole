@@ -4,6 +4,8 @@ import { Card2 } from "../../components/Card2";
 import {SimpleSlider} from '../../components/SimpleSlider'
 import { Footer } from '../../components/Footer'
 import { BsFillChatQuoteFill } from 'react-icons/bs'
+//import cadre from '../'
+
 import './index.scss'
 
 export function Home({mediaQuery816}) {
@@ -38,11 +40,13 @@ export function Home({mediaQuery816}) {
           <div className={`container ${ mediaQuery816 ? 'mobile' : ''}`}>
 
             <div className='hero'>
-              <h1>Je transforme des
-                <span> concepts</span> en
-                <span> interfaces concrètes </span>
-                  et <span> intuitives</span>.
-              </h1>
+              <div className="title" style={{ backgroundImage: "url(/cadre.png)" }}>
+                <h1>Je transforme des
+                  <span> concepts</span> en
+                  <span> interfaces concrètes </span>
+                    et <span> intuitives</span>.
+                </h1>
+              </div>
               <div className='brand'>
                 <p>
                   J’aime adopter une approche allant de l’analyse à la résolution de problèmes.
