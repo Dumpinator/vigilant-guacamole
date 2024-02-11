@@ -51,7 +51,7 @@ export function About({mediaQuery816}) {
                 </div>
             </div>
             <div className='section-2'>
-                <h2>Mes environnements de travail</h2>
+                <h2><span>Mes expériences</span></h2>
                 <div className={`container${mediaQuery816 ? '' : ' mobile'}`}>
                     <div className={`right${mediaQuery816 ? '' : ' mobile'}`}>
                         <div className='text'>

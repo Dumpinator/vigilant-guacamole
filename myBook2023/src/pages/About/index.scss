@@ -94,16 +94,23 @@
         min-height: 100vh;
         background-color: #191117;
         display: flex;
+        justify-content: center;
+        align-items: start;
         flex-direction: column;
 
         h2 {
+            margin-left: 4em;
             color: var(--White, #FFF);
-            text-align: center;
+            //text-align: center;
             font-family: Anton, sans-serif;
             font-size: 40px;
             font-style: normal;
             font-weight: 400;
             line-height: normal;
+
+            span {
+                color: #F2F79E;
+            }
         }
         .container {
             display: flex;

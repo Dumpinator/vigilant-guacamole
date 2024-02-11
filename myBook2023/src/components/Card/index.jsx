@@ -1,69 +1,36 @@
 // eslint-disable-next-line no-unused-vars
 import React from 'react';
-import { MdSavedSearch, MdBorderColor, MdDesignServices, MdStar } from 'react-icons/md'
-import { Tag } from '../Tag/index.jsx';
-//import './styles.scss';
+import { motion } from "framer-motion";
+import './styles.scss';
+import {Link} from "react-router-dom";
 
 
 // eslint-disable-next-line react/prop-types
-export const Card = ({ title, text, icon, tags, color, bg, children }) => {
-
-    const customIcon = (icon) => {
-        switch (icon) {
-            case 'search':
-                return <MdSavedSearch className='icon-card'/>
-            case 'cut':
-                return <MdBorderColor className='icon-card'/>
-            case 'lib':
-                return <MdDesignServices className='icon-card'/>
-            case 'star':
-                return <MdStar className='icon-card'/>
-            default:
-               return null;
-        }
-    }
-
+export const Card = ({ beforeImg, hoverImg, link }) => {
+    const url = `url(${beforeImg})`;
+    const url2 = `url(${hoverImg})`;
+    const goto = `projet/${link}`;
     return (
-        <div className='card'>
-            <div className='box__shadow'></div>
-            <div className='box__content'>
-                <div className='test' 
-                        style={ bg ? { 
-                            background: `url(${bg})`,
-                            backgroundSize: "cover",
-                            backgroundRepeat: "no-repeat",
-                            backgroundPosition: "center",
-                            overflow: "hidden",
-                            borderRadius: "24px",
-                        } : null }>
-                    {
-                        title ? 
-                            <div className='header' style={{backgroundColor: `${color}`}}>
-                                <p className='title'>{ title }</p>
-                                { icon ? customIcon(icon) : null }
-                            </div> : null
-                    }
-                    <div className='content'>
-                        <p className='text'>{ text }</p>
-                        <div className='tags'>
-                           {
-                           // eslint-disable-next-line react/prop-types
-                            tags?.map(
-                                (text, index) => 
-                                    <Tag key={text+index+Date.now()} text={text} />
-                            )
-                           }
-                        </div>
-                        { children ? children : null }
-                    </div>
-                </div>
-                <div className='toto'>
-                    <div className='to'></div>
-                </div>
-                <div className='tutu'>
-                    <div className='tu'></div>
-                </div>
-            </div>
-        </div>
+            <Link to={goto}>
+                <motion.div
+                    style={{
+                        backgroundImage: url,
+                        backgroundSize: "cover",
+                        backgroundPosition: "center",
+                        borderRadius: "10px",
+                        margin: "2em",
+                        marginBottom: "5em",
+                    }}
+                    className="card"
+                    whileHover={{
+                        scale: 1.1,
+                        backgroundImage: url2,
+                        objectFit: "cover",
+
+                    }}
+                >
+                </motion.div>
+            </Link>
+
     )
 }

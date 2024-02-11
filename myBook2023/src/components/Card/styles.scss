@@ -2,128 +2,15 @@
 
 
 .card {
-	//background-color: #171D1C;
-	position: relative;
-	max-width: 512px;
-	width: 80%;
-	//border-bottom-right-radius: 40px;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	margin-bottom: 5em;
 
-	.box__shadow {
-		position: relative;
-		max-width: 512px;
-		min-height:250px;
-		height: 100%;
-		border-bottom-right-radius: 40px;
-		display: flex;
-		justify-content: center;
-		align-items: center;
-	}
+	min-height: 400px;
+	min-width: 400px;
 
-	.box__content {
-		position: absolute;
-		z-index: 1;
-		width: 100%;
-		height: 100%;
-		bottom: 25px;
-		right: 25px;
-		background-color: white;
-		border: #171D1C solid 10px;
-		border-radius: 42px;
+	&:hover {
+		margin: 0;
+		padding: 0;
+		transition: 0.5s;
 
-		.test  {
-			position: absolute;
-			width: 100%;
-			height: 100%;
-			display: flex;
-			flex-direction: column;
-
-			.header {
-				display: flex;
-				justify-content: space-between;
-				padding: 0 20px;
-				align-items: center;
-				border-top-left-radius: 24px;
-				border-top-right-radius: 24px;
-				border-bottom: #171D1C solid 10px;
-
-				.title {
-					color: #22162B;
-					text-transform: uppercase;
-					font-family: Karla;
-					font-size: 18px;
-					font-style: normal;
-					font-weight: 600;
-					line-height: 160%;
-				}
-
-				svg {
-					width: 30px;
-					height: 30px;
-				}
-			}
-
-			.content {
-				height: 100%;
-				display: flex;
-				flex-direction: column;
-				justify-content: space-evenly;
-				padding: 5px 20px;
-
-				.text {
-					color: #22162B;
-					font-family: Karla;
-					font-size: 16px;
-					font-style: normal;
-					font-weight: 400;
-					line-height: 160%;
-				}
-
-				.tags {
-					display: flex;
-				}
-			}
-		}
-		
-		.toto {
-			position: absolute;
-			z-index: -10;
-			height: 80px;
-			width: 80px;
-			border-radius: 50%;
-			background-color: #171D1C;
-			top: calc(100% - 45px);
-
-			.to {
-				position: relative;
-				bottom: 5px;
-				height:50px;
-				width: 100px;
-				border-bottom-left-radius: 28px;
-				background-color: white;
-			}
-		}
-		.tutu {
-			position: absolute;
-			z-index: -10;
-			height: 80px;
-			width: 80px;
-			border-radius: 50%;
-			background-color: #171D1C;
-			left: calc(100% - 45px);
-
-			.tu {
-				position: relative;
-				top: 0;
-				height: 100px;
-				width: 45px;
-				border-top-right-radius: 28px;
-				background-color: white;
-			}
-		}
 	}
 
 	@media screen and (max-width: v.$oneColum) {

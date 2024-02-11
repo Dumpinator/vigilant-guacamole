@@ -3,7 +3,9 @@ import { Link } from "react-router-dom"
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { wrap } from "popmotion";
+
 import './index.scss'
+import {Footer} from "../../components/Footer/index.jsx";
 
 
 
@@ -52,21 +54,21 @@ const variants2 = {
 export const images = [
     [
         "/slider01.jpg",
-        "#F7DEF5",
+        "linear-gradient(135deg,#69FF97 10%,#00E4FF 100%)",
         "Comment améliorer la reprise d’un produit de seconde main ?",
         "Freepry c’est la solution destinée aux boutiques pour se lancer dans la seconde main. Elle met à disposition une solution clé en main  permettant d’optimiser la reprise et la revente des produits de seconde main grâce à un algorithme de reprise.",
         "freepry1"
     ],
     [
         "/slider02.jpg",
-        "#E2E4F3",
+        "linear-gradient(135deg,#EE9AE5 10%,#5961F9 100%)",
         "Comment simplifier l’expérience de jeu pour les débutants ?",
         "Lichess.org est une plateforme de jeu d’échecs en ligne open-source et destinée aux passionnés. Il propose plusieurs services à ses utilisateurs : lancement d'une partie, participation à de grands tournois et le suivi des compétitions.",
         "lichess"
     ],
     [
         "/slider03.jpg",
-        "#FEF8EC",
+        "linear-gradient(135deg,#FD6E6A 10%,#FFC600 100%)",
         "Créer un outil de visualisation des dépôts et des ventes",
         "Freepry c’est la solution destinée aux boutiques pour se lancer dans la seconde main. Elle met à disposition une solution clé en main  permettant d’optimiser la reprise et la revente des produits de seconde main grâce à un algorithme de reprise.",
         "freepry2"
@@ -104,7 +106,8 @@ export const Projects2 = () => {
     };
 
     return (
-        <div className="example-container">
+        <>
+        <div className="example-container" style={{overflowX: "hidden"}}>
 
             <AnimatePresence initial={false} custom={direction}>
                 <motion.img
@@ -193,10 +196,14 @@ export const Projects2 = () => {
                 position: "absolute",
                 right: 0,
                 width: "30%",
-                backgroundColor: images[imageIndex][1],
-                height: "100%"
+                //backgroundColor: images[imageIndex][1],
+                height: "100%",
+                backgroundImage: images[imageIndex][1],
             }}>
             </div>
         </div>
+        <Footer/>
+
+    </>
     );
 };
