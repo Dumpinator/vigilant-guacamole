@@ -58,6 +58,29 @@
 			flex-wrap: wrap;
 			padding: 0 1em;
 
+
+			a {
+				text-decoration: none;
+				outline: none;
+
+				&:hover {
+
+					scale: 1.1;
+					transition: 0.2s;
+				}
+			}
+			.btnFooter {
+				background-color: #DD69D1;
+				padding: 10px 20px;
+				border-radius: 8px;
+				box-shadow: 1px 1px 5px #000;
+				cursor: pointer;
+				color: #FFF;
+			}
+
+
+
+
 			.wrapper {
 				margin: 0 10px;
 			}

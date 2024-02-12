@@ -12,12 +12,10 @@ export const Footer = ({mediaQuery816}) => {
                 <div className='email'>gaspardelphine01@gmail.com</div>
                 <div className='social'>
                     <a href="/cv.pdf" target='_blank' rel='noopener noreferrer' className='wrapper'> 
-                        <div  className='btn'>CV</div>
-                        <div className='fix'></div>
+                        <div  className='btnFooter'>CV</div>
                     </a>
                     <a href=" https://www.linkedin.com/in/delphine-gaspar/" target='_blank' rel='noopener noreferrer' className='wrapper'> 
-                        <div  className='btn'>LINKEDIN</div>
-                        <div className='fix'></div>
+                        <div  className='btnFooter'>LINKEDIN</div>
                     </a>
                 </div>
             </div>
