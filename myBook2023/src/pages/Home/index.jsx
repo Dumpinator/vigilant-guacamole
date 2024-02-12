@@ -35,12 +35,12 @@ export function Home({mediaQuery816}) {
         {
             beforeImg: "/card01.png",
             hoverImg: "/card01h.png",
-            link: "freepry1"
+            link: "lichess"
         },
         {
             beforeImg: "/card02.png",
             hoverImg: "/card02h.png",
-            link: "lichess"
+            link: "freepry1"
         },
     ])
 
