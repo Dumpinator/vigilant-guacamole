@@ -64,8 +64,8 @@ et ne déclenche pas de publication depuis cette session.
 1. Dans le **projet Netlify existant** `delphine-gaspar`, ouvrir **Project
    configuration > General > Project details > Project information** et copier
    le **Project ID**. Il correspond à `NETLIFY_SITE_ID` dans l'API et la CLI.
-2. Dans [les paramètres Actions du dépôt](https://github.com/Dumpinator/vigilant-guacamole/settings/variables/actions),
-   onglet **Variables**, ajouter une variable de dépôt `NETLIFY_SITE_ID` avec
+2. Dans [les paramètres Actions du dépôt](https://github.com/Dumpinator/vigilant-guacamole/settings/secrets/actions),
+   onglet **Secrets**, ajouter un secret de dépôt `NETLIFY_SITE_ID` avec
    cet identifiant. Ne pas créer un nouveau projet Netlify.
 3. Dans [Netlify > Applications > Personal access tokens](https://app.netlify.com/user/applications#personal-access-tokens),
    générer un jeton dédié et lui donner une date d'expiration adaptée.
