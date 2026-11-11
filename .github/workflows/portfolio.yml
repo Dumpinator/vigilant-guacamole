@@ -60,5 +60,4 @@ jobs:
             --message="$GITHUB_SHA" \
             --no-build \
             --prod \
-            --context=production \
             --timeout=180
