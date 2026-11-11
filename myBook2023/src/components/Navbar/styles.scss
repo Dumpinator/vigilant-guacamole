@@ -1,205 +1,123 @@
 @use 'src/styles/vars' as v;
 
-@import url('https://fonts.googleapis.com/css2?family=Karla:wght@400;600;800&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Anton&family=Karla:wght@400;600;800&display=swap');
 
+.site-nav {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    min-height: 78px;
+    padding-inline: clamp(1rem, 3.4vw, 3.5rem);
+    background-color: v.$portfolio-surface;
+    color: #fff;
+    font: 400 0.875rem/1.2 'Portfolio Pixel', 'Bitcount Prop Single', monospace;
+    text-transform: uppercase;
 
+    a {
+        color: inherit;
+        text-decoration: none;
 
-$text-black-color: #22162B;
-$text-hover-color: #B72AA9;
-$text-select-color: #D6409F;
+        &:hover {
+            color: #ff8dcc;
+        }
 
-nav {
-	width: 100%;
-	position: sticky;
-	top: 0;
-	z-index: 100;
-	//border-bottom: solid 4px #171D1C;
+        &[aria-current='page'] {
+            color: #f2f79e;
+        }
+    }
 
-	.menu-mobile {
-		text-transform: uppercase;
-		font-weight: bold;
-		font-size: 16px;
-		color: #fff;
-		background-color: #fff;
-		box-shadow: 0 10px 20px 1px #22162B;
-		position: relative;
-		z-index: 150;
-		display: none;
+    a:focus-visible,
+    button:focus-visible {
+        outline: 2px solid #ff8dcc;
+        outline-offset: 4px;
+    }
 
-		.is-open {
-			//-webkit-transform: rotate(360deg);
-			transform: rotate(360deg) scale(1.2); ;
-			transition: all 0.3s ease-in-out;
-			color: v.$blue-color;
-		}
+    &__brand {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.75rem;
+        font-size: clamp(0.875rem, 1.5vw, 1.25rem);
+    }
 
-		.is-close {
-			//-webkit-transform: rotate(-720deg);
-			transform: rotate(-720deg);
-			transition: transform 0.2s ease-in-out;
-			color: v.$pink-color;
-		}
-	}
+    &__avatar {
+        flex: none;
+        width: 2.75rem;
+        height: 2.75rem;
+        object-fit: contain;
+        image-rendering: pixelated;
+    }
 
-	.list {
-		background-color: #21121D;
-		display: flex;
-		flex-direction: row;
-		align-items: center;
-		justify-content: space-between;
+    &__links {
+        display: flex;
+        align-items: center;
+        gap: clamp(1rem, 3vw, 2.5rem);
+        margin: 0;
+        padding: 0;
+        list-style: none;
+    }
 
-		.logo-icon {
-			text-decoration: none;
-			.logo {
-				display: flex;
-				justify-content: center;
-				align-items: center;
-				height: 60px;
-				margin-left: 1em;
-				h1 {
-					width: 100%;
-					margin-left: 0.5em;
-					color: var(--Black, #fff);
-					font-family: Anton, sans-serif;
-					font-size: 24px;
-					font-style: normal;
-					font-weight: 400;
-					line-height: normal;
-				}
-			}
-		}
+    &__toggle {
+        display: none;
+    }
 
-		ul {
-			margin: 0px;
-			padding: 0px;
-			flex-direction: row;
-			display: flex;
-			margin-right: 2em;
+    @media (max-width: v.$oneColum) {
+        display: grid;
+        grid-template-columns: minmax(0, 1fr) auto;
+        grid-template-rows: 60px auto;
+        min-height: 60px;
 
-			li {
-				display: flex;
-				list-style-type: none;
-				flex-direction: row;
-				align-items: center;
-				justify-content: center;
+        &__brand,
+        &__toggle {
+            min-height: 44px;
+        }
 
-				a {
-					font-family: 'Karla', sans-serif;
-					display: flex;
-					text-decoration: none;
-					font-weight: 900;
-					padding: 30px 20px; // détermine la hauteur de nav
-					color: #fff;
+        &__avatar {
+            width: 2.5rem;
+            height: 2.5rem;
+        }
 
-					&:hover {
-						color: $text-hover-color;
-						transition: color 0.3s ease;
-					}
-				}
+        &__toggle {
+            display: grid;
+            width: 44px;
+            place-items: center;
+            border: 0;
+            background: transparent;
+            color: #f2f79e;
+            cursor: pointer;
 
-				.active { color: $text-select-color; }
-			}
+            span {
+                width: 1.125rem;
+                height: 2px;
+                background: currentColor;
+                box-shadow: 0 -5px currentColor, 0 5px currentColor;
+            }
 
-			li:last-child {
-				display: flex;
-				padding-right: 10px;
-			}
-		}
-	}
+            &[aria-expanded='true'] {
+                color: #ff8dcc;
+            }
+        }
 
-	input[type=checkbox] {
-		display: none;
-	}
-}
+        &__links {
+            display: none;
+            grid-column: 1 / -1;
+            flex-direction: column;
+            align-items: stretch;
+            gap: 0;
+            padding-block: 0.25rem 0.75rem;
 
-@media screen and (max-width: v.$oneColum) {
+            &.is-open {
+                display: flex;
+            }
 
-	nav {
-		flex-direction: column;
-		align-items: center;
-		justify-content: space-between;
-		position: sticky;
-		top: 0;
-		z-index: 100;
-
-		// Label
-		.menu-mobile {
-			display: flex;
-			align-items: center;
-			justify-content: space-between;
-			padding: 0 1rem;
-			height: 60px;
-			color: v.$orange-color;
-			z-index: 150;
-		}
-
-		input[type=checkbox] {
-			& ~ .list {
-
-				position: relative;
-				z-index: 1;
-
-				max-height: 0;
-				overflow: hidden;
-				transition: all 500ms ease-in-out;
-				background-color: v.$blue-color;
-
-				a { padding: 1em;}
-
-				.logo {
-					display: none;
-				}
-
-				ul {
-					display: flex;
-					flex-direction: column;
-					align-items: center;
-					width: 100%;
-
-					li > a {
-						color: #fff;
-						font-weight: bold;
-					}
-					.active {
-						color: v.$orange-color;
-					}
-					li:hover a {
-						-webkit-transform: scale(1.1);
-						transform: scale(1.1);
-					}
-					li:last-child {
-						padding-right: 0;
-					}
-				}
-			}
-		}
-
-		input[type=checkbox]:checked {
-			& ~ .list {
-				max-height: 50vh;
-				position: relative;
-				z-index: 50;
-			}
-		}
-	}
-}
-
-.fade-enter {
-	opacity: 0;
-	transform: translateY(-100%);
-}
-.fade-enter-active {
-	opacity: 1;
-	transform: translateY(0%);
-	transition: all 0.5s ease;
-}
-.fade-exit {
-	opacity: 1;
-	transform: translateY(-100%);
-}
-.fade-exit-active {
-	opacity: 0;
-	transform: translateY(0%);
-	transition: all 0.5s ease-out;
+            a {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                min-height: 44px;
+            }
+        }
+    }
 }

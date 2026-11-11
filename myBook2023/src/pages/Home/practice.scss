@@ -1,0 +1,345 @@
+.practice {
+  --practice-ink: #241821;
+  --practice-line: #4c3547;
+  --practice-paper: #fbf8f3;
+
+  position: relative;
+  background: var(--practice-paper);
+  color: var(--practice-ink);
+  padding: clamp(3.5rem, 7vw, 7rem) clamp(1.25rem, 6vw, 6rem);
+
+  scroll-margin-top: 78px;
+
+  .practice-layout {
+    width: min(100%, 75rem);
+    margin-inline: auto;
+  }
+
+  .practice-intro {
+    margin-bottom: clamp(1.75rem, 4vw, 3rem);
+
+    h2 {
+      max-width: 17ch;
+      margin: 1rem 0 0;
+      font: 400 clamp(1.75rem, 3.3vw, 3.25rem)/1.18 'Portfolio Pixel', 'Bitcount Prop Single', monospace;
+      text-transform: uppercase;
+      text-wrap: balance;
+
+      span {
+        display: inline-block;
+        padding: 0 0.17em 0.06em;
+        background: #f2f79e;
+        box-shadow: 0.09em 0.09em #dcc9f4;
+      }
+    }
+  }
+
+  .practice-decoration {
+    position: relative;
+    width: 8rem;
+    height: 3.5rem;
+  }
+
+  .practice-monitor {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: grid;
+    width: 4.25rem;
+    height: 2.65rem;
+    padding: 4px;
+    box-sizing: border-box;
+    border: 2px solid var(--practice-ink);
+    background: #e3ccfa;
+    box-shadow: 3px 3px var(--practice-ink);
+
+    span {
+      border: 2px solid var(--practice-ink);
+      background: linear-gradient(135deg, #c498ee 35%, #ead7ff 35% 48%, #c498ee 48% 63%, #ead7ff 63% 72%, #c498ee 72%);
+    }
+
+    &::after {
+      position: absolute;
+      top: 100%;
+      left: 1.05rem;
+      width: 1.75rem;
+      height: 0.65rem;
+      background: var(--practice-ink);
+      clip-path: polygon(33% 0, 67% 0, 67% 60%, 100% 60%, 100% 100%, 0 100%, 0 60%, 33% 60%);
+      content: '';
+    }
+  }
+
+  .practice-cursor {
+    --cursor: polygon(
+      0 0, 15% 0, 15% 12%, 30% 12%, 30% 24%, 46% 24%, 46% 36%,
+      62% 36%, 62% 48%, 78% 48%, 78% 60%, 100% 60%, 100% 73%,
+      64% 73%, 64% 85%, 79% 85%, 79% 100%, 58% 100%, 58% 88%,
+      43% 88%, 43% 76%, 31% 76%, 31% 86%, 16% 86%, 16% 100%, 0 100%
+    );
+
+    position: absolute;
+    left: 4.65rem;
+    bottom: 0.1rem;
+    width: 1.9rem;
+    height: 2rem;
+    background: var(--practice-ink);
+    clip-path: var(--cursor);
+
+    &::after {
+      position: absolute;
+      inset: 3px;
+      background: #ff8dcc;
+      clip-path: var(--cursor);
+      content: '';
+    }
+  }
+
+  .practice-spark {
+    position: absolute;
+    top: 0.1rem;
+    left: 6.25rem;
+    width: 1rem;
+    height: 1rem;
+    background: #9f64c0;
+    clip-path: polygon(38% 0, 62% 0, 62% 38%, 100% 38%, 100% 62%, 62% 62%, 62% 100%, 38% 100%, 38% 62%, 0 62%, 0 38%, 38% 38%);
+  }
+
+  .practice-topic {
+    --topic-tint: #e4c9fa;
+
+    display: grid;
+    grid-template-columns: minmax(0, 0.62fr) minmax(0, 1.38fr);
+    align-items: start;
+    gap: clamp(1.25rem, 4vw, 4rem);
+    padding-top: clamp(1.75rem, 4vw, 3rem);
+    border-top: 1px solid #c5b5c0;
+
+    + .practice-topic {
+      --topic-tint: #f2f79e;
+      margin-top: clamp(2rem, 5vw, 4rem);
+    }
+  }
+
+  .practice-topic__heading {
+    &::before {
+      display: block;
+      width: 2rem;
+      height: 0.45rem;
+      margin-bottom: 1rem;
+      background: var(--topic-tint);
+      box-shadow: 2px 2px var(--practice-line);
+      content: '';
+    }
+
+    h3 {
+      max-width: 22ch;
+      margin: 0;
+      font: 400 clamp(1.125rem, 2vw, 1.75rem)/1.25 'Portfolio Pixel', 'Bitcount Prop Single', monospace;
+      text-transform: uppercase;
+    }
+
+    p {
+      max-width: 37ch;
+      margin: 0.8rem 0 0;
+      font: 400 1rem/1.55 Karla, sans-serif;
+    }
+  }
+
+  .practice-windows {
+    display: grid;
+    gap: 0.95rem;
+  }
+
+  .practice-window {
+    --window-tint: #f9cae3;
+    --window-shadow: #e9bfd7;
+
+    display: grid;
+    grid-template-columns: clamp(3.625rem, 12vw, 6rem) minmax(0, 1fr);
+    align-items: start;
+    gap: clamp(0.75rem, 2vw, 1.35rem);
+    min-width: 0;
+    padding: clamp(0.65rem, 1.5vw, 1rem);
+    border: 1px solid #d0becb;
+    background: #fff;
+    box-shadow: 3px 3px var(--window-shadow);
+
+    &--folder,
+    &--flow {
+      --window-tint: #e8d9fb;
+      --window-shadow: #d8c6ef;
+    }
+
+    &--screen,
+    &--disk {
+      --window-tint: #f1f5bb;
+      --window-shadow: #e2e6a3;
+    }
+
+    &--feedback {
+      --window-tint: #d9eee4;
+      --window-shadow: #b8d9cc;
+    }
+  }
+
+  .practice-window__tile {
+    display: grid;
+    aspect-ratio: 1;
+    place-items: center;
+    border: 1px solid #52394a35;
+    background: radial-gradient(circle, #62475d42 1px, transparent 1.4px) 0 0 / 8px 8px, var(--window-tint);
+  }
+
+  .practice-window__body {
+    h4 {
+      margin: 0 0 0.45rem;
+      font: 400 clamp(0.875rem, 1.5vw, 1.25rem)/1.3 'Portfolio Pixel', 'Bitcount Prop Single', monospace;
+      text-transform: uppercase;
+      overflow-wrap: anywhere;
+    }
+
+    p {
+      margin: 0;
+      font: 400 1rem/1.55 Karla, sans-serif;
+    }
+  }
+
+  .practice-glyph {
+    position: relative;
+    display: block;
+    width: 2.4rem;
+    aspect-ratio: 1;
+    background: var(--window-tint);
+    transform: scale(1.22);
+
+    &::before,
+    &::after {
+      position: absolute;
+      content: '';
+    }
+
+    &--search {
+      &::before {
+        inset: 5px 12px 12px 5px;
+        border: 3px solid var(--practice-ink);
+        background: #fff;
+      }
+
+      &::after {
+        right: 5px;
+        bottom: 5px;
+        width: 12px;
+        height: 12px;
+        background: var(--practice-ink);
+        clip-path: polygon(0 0, 33% 0, 33% 33%, 66% 33%, 66% 66%, 100% 66%, 100% 100%, 66% 100%, 66% 66%, 33% 66%, 33% 33%, 0 33%);
+      }
+    }
+
+    &--folder {
+      &::before {
+        inset: 7px 4px 6px;
+        background: var(--practice-ink);
+        clip-path: polygon(0 0, 44% 0, 44% 16%, 100% 16%, 100% 100%, 0 100%);
+      }
+
+      &::after {
+        inset: 13px 7px 9px;
+        background: linear-gradient(#f4e8ff 20%, #c18deb 20%);
+      }
+    }
+
+    &--screen {
+      &::before {
+        inset: 6px 3px 12px;
+        border: 3px solid var(--practice-ink);
+        background: linear-gradient(135deg, #faffd7 45%, #c4ce67 45% 60%, #e1e998 60%);
+      }
+
+      &::after {
+        left: 12px;
+        bottom: 6px;
+        width: 14px;
+        height: 6px;
+        background: var(--practice-ink);
+        clip-path: polygon(35% 0, 65% 0, 65% 50%, 100% 50%, 100% 100%, 0 100%, 0 50%, 35% 50%);
+      }
+    }
+
+    &--feedback {
+      &::before {
+        inset: 6px 3px;
+        background: var(--practice-ink);
+        clip-path: polygon(0 0, 100% 0, 100% 76%, 40% 76%, 40% 88%, 28% 88%, 28% 100%, 16% 100%, 16% 76%, 0 76%);
+      }
+
+      &::after {
+        inset: 9px 6px 15px;
+        background:
+          linear-gradient(var(--practice-ink) 0 0) center / 4px 4px no-repeat,
+          linear-gradient(var(--practice-ink) 0 0) 24% center / 4px 4px no-repeat,
+          linear-gradient(var(--practice-ink) 0 0) 76% center / 4px 4px no-repeat,
+          #f2fbf6;
+      }
+    }
+
+    &--flow {
+      background:
+        linear-gradient(var(--practice-ink) 0 0) 50% 48% / 50% 2px no-repeat,
+        linear-gradient(var(--practice-ink) 0 0) 50% 50% / 2px 45% no-repeat,
+        var(--window-tint);
+
+      &::before,
+      &::after {
+        width: 8px;
+        height: 8px;
+        border: 2px solid var(--practice-ink);
+        background: #f8efff;
+      }
+
+      &::before {
+        top: 6px;
+        left: 4px;
+        box-shadow: 18px 0 0 -2px #f8efff, 18px 0 var(--practice-ink);
+      }
+
+      &::after {
+        left: 13px;
+        bottom: 4px;
+      }
+    }
+
+    &--disk {
+      &::before {
+        inset: 5px;
+        background: var(--practice-ink);
+        clip-path: polygon(0 0, 80% 0, 80% 12%, 92% 12%, 92% 22%, 100% 22%, 100% 100%, 0 100%);
+      }
+
+      &::after {
+        inset: 7px 12px;
+        background: linear-gradient(#f2f79e 35%, transparent 35% 54%, #f2f79e 54%);
+      }
+    }
+  }
+
+  @media (max-width: 815px) {
+    .practice-layout {
+      max-width: 36rem;
+    }
+
+    .practice-topic {
+      grid-template-columns: minmax(0, 1fr);
+    }
+
+    .practice-glyph {
+      transform: none;
+    }
+  }
+
+  @media (max-width: 360px) {
+    .practice-window__body p {
+      font-size: 0.9375rem;
+    }
+  }
+}

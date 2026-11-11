@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 import './styles.scss';
 
 
-export const Icons = ({ icon })  => {
+export const Icons = ({ icon, ariaLabel })  => {
 
     const [hover, setHover] = useState(false);
     const [hovered, setHovered] = useState(false);
@@ -41,7 +41,7 @@ export const Icons = ({ icon })  => {
     switch (icon) {
         case 'Linkedin':
             return (
-                <Link to='/lelab' className='icons'
+                <Link to='/lelab' className='icons' aria-label={ariaLabel}
                     onMouseEnter={() => setHover(true)}
                     onMouseLeave={() => functest()}
                 >
