@@ -4,6 +4,7 @@ import {Card2} from "../../components/Card2";
 import {Footer} from '../../components/Footer'
 import {BsFillChatQuoteFill} from 'react-icons/bs'
 import './index.scss'
+import './pixel.scss'
 
 export function Home({mediaQuery816}) {
 
