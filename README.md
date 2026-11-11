@@ -39,6 +39,23 @@ npm.cmd run build -- --outDir .local-build
 Le résultat se trouve dans `myBook2023/.local-build/`, ignoré par Git.
 La commande habituelle `npm.cmd run build` écrit quant à elle dans `dist/`.
 
+## CI et publication automatique
+
+Le workflow [Portfolio CI and Netlify](.github/workflows/portfolio.yml) compile
+le projet et exécute huit tests Playwright sur les fichiers de production.
+Les pushes sur `main` publient ensuite ce même `myBook2023/dist/` sur Netlify,
+uniquement si tous les contrôles ont réussi. Les autres branches et les pull
+requests sont vérifiées sans publication.
+
+Avant le premier push, renseigner dans les paramètres Actions de GitHub le
+secret `NETLIFY_AUTH_TOKEN` et la variable `NETLIFY_SITE_ID` du projet existant.
+Arrêter les builds Git automatiques de Netlify s'ils sont actifs pour éviter
+deux chaînes de publication indépendantes.
+
+Le [guide de déploiement](docs/deployment.md) compare les méthodes possibles,
+explique cette activation, les coûts et les commandes de vérification locale.
+Aucun modèle d'IA ni MCP n'est utilisé dans le workflow.
+
 ## Vérification de la version retrouvée
 
 Le build historique **et le build reconstruit depuis les sources** produisent
@@ -59,12 +76,11 @@ dans `src/pages/Lab/`.
   3 avertissements préexistants, principalement des imports inutilisés, les
   validations des props et des apostrophes JSX. Ils ne bloquent pas le build.
 - Sur Netlify, les URL internes ouvertes directement (`/projets`, `/about`,
-  `/projet/lichess`, etc.) renvoient une 404. La navigation React depuis
-  l'accueil est un parcours distinct. Il faut prévoir le repli SPA dans la
-  configuration du prochain déploiement.
-- `src/App.jsx` importe `./pages/lab` alors que le dossier Git s'appelle `Lab`.
-  Cela fonctionne sur Windows, mais la casse doit être corrigée avant un build
-  sur un système sensible à la casse.
+  `/projet/lichess`, etc.) renvoyaient une 404 lors de l'audit. La règle SPA
+  `public/_redirects` est maintenant incluse dans les nouveaux builds et sera
+  appliquée à la prochaine publication.
+- L'import `./pages/Lab` dans `src/App.jsx` respecte maintenant la casse du
+  dossier Git, nécessaire à la CI Linux.
 - Contrôle Chrome/Playwright aux largeurs 1440, 768, 390 et 320 px : aucune
   exception JavaScript observée. Les pages valides et le CV se chargent.
   Les flèches du carrousel parcourent les trois projets et bouclent correctement ;
@@ -84,5 +100,5 @@ dans `src/pages/Lab/`.
 Le contrôle est limité à Chrome en mode headless et aux parcours ci-dessus ;
 Safari, Firefox et les téléphones physiques n'ont pas été testés.
 
-La remise en route n'a modifié ni le code applicatif ni le build historique.
-Les corrections fonctionnelles restent à traiter séparément.
+Le build historique reste conservé. Les problèmes de présentation et de
+navigation mobile relevés ci-dessus restent à traiter séparément.

@@ -1,0 +1,12 @@
+{
+  "name": "portfolio-ci-tools",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "test": "playwright test"
+  },
+  "devDependencies": {
+    "@playwright/test": "1.65.0",
+    "netlify-cli": "27.17.0"
+  }
+}

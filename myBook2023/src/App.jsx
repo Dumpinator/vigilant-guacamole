@@ -6,7 +6,7 @@ import { MainLayout } from './layouts/MainLayout'
 import { Home } from './pages/Home'
 import { Project } from './pages/Project'
 import { About } from "./pages/About"
-import { Lab } from "./pages/lab"
+import { Lab } from "./pages/Lab"
 import {Projects2} from "./pages/Projects2/index.jsx";
 
 function App() {
