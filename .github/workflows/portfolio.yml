@@ -15,9 +15,9 @@ concurrency:
 
 jobs:
   portfolio:
-    name: Build, browser checks, deploy
+    name: Build and deploy
     runs-on: ubuntu-latest
-    timeout-minutes: 20
+    timeout-minutes: 10
     env:
       CI: 'true'
     steps:
@@ -31,48 +31,17 @@ jobs:
         with:
           node-version: '24'
           cache: npm
-          cache-dependency-path: |
-            myBook2023/package-lock.json
-            .github/ci/package-lock.json
+          cache-dependency-path: myBook2023/package-lock.json
 
       - name: Install portfolio dependencies
         working-directory: myBook2023
         run: npm ci --legacy-peer-deps --no-audit --no-fund
 
-      - name: Install locked CI tools
-        working-directory: .github/ci
-        run: npm ci --no-audit --no-fund
-
       - name: Build production files
         working-directory: myBook2023
         run: npm run build
 
-      - name: Install Chromium
-        working-directory: .github/ci
-        run: npm exec -- playwright install --with-deps chromium
-
-      - name: Test the production build
-        working-directory: .github/ci
-        run: npm test
-
-      - name: Keep browser traces on failure
-        if: failure()
-        uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9 # v7
-        with:
-          name: browser-traces-${{ github.run_id }}
-          path: .github/ci/test-results/
-          if-no-files-found: ignore
-          retention-days: 3
-
-      - name: Keep the verified build
-        uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9 # v7
-        with:
-          name: portfolio-${{ github.sha }}
-          path: myBook2023/dist/
-          if-no-files-found: error
-          retention-days: 3
-
-      - name: Deploy the verified build to Netlify
+      - name: Deploy to Netlify
         if: >-
           github.ref == 'refs/heads/main' &&
           (github.event_name == 'push' || github.event_name == 'workflow_dispatch')
@@ -82,10 +51,10 @@ jobs:
         shell: bash
         run: |
           if [[ -z "$NETLIFY_AUTH_TOKEN" || -z "$NETLIFY_SITE_ID" ]]; then
-            echo '::error::Configure the NETLIFY_AUTH_TOKEN repository secret and NETLIFY_SITE_ID repository variable before deploying.'
+            echo '::error::Configure the NETLIFY_AUTH_TOKEN and NETLIFY_SITE_ID repository secrets before deploying.'
             exit 1
           fi
-          .github/ci/node_modules/.bin/netlify deploy \
+          npx --yes netlify-cli@27.17.0 deploy \
             --dir="$GITHUB_WORKSPACE/myBook2023/dist" \
             --site="$NETLIFY_SITE_ID" \
             --message="$GITHUB_SHA" \

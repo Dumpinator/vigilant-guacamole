@@ -41,14 +41,14 @@ La commande habituelle `npm.cmd run build` écrit quant à elle dans `dist/`.
 
 ## CI et publication automatique
 
-Le workflow [Portfolio CI and Netlify](.github/workflows/portfolio.yml) compile
-le projet et exécute huit tests Playwright sur les fichiers de production.
+Le workflow [Portfolio CI and Netlify](.github/workflows/portfolio.yml) installe
+les dépendances puis compile le projet avec `npm run build`.
 Les pushes sur `main` publient ensuite ce même `myBook2023/dist/` sur Netlify,
-uniquement si tous les contrôles ont réussi. Les autres branches et les pull
-requests sont vérifiées sans publication.
+uniquement si la compilation a réussi. Les autres branches et les pull
+requests sont compilées sans publication. Il n'y a pas de tests navigateur.
 
-Avant le premier push, renseigner dans les paramètres Actions de GitHub le
-secret `NETLIFY_AUTH_TOKEN` et la variable `NETLIFY_SITE_ID` du projet existant.
+Avant le premier push, renseigner dans les paramètres Actions de GitHub les
+deux secrets `NETLIFY_AUTH_TOKEN` et `NETLIFY_SITE_ID` du projet existant.
 Arrêter les builds Git automatiques de Netlify s'ils sont actifs pour éviter
 deux chaînes de publication indépendantes.
 
