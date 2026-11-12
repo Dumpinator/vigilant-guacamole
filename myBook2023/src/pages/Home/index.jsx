@@ -37,6 +37,7 @@ const practiceTopics = [
     {
         id: 'practice-system',
         title: 'Structurer le contexte de design',
+        conclusion: 'Je maintiens un design system Figma réutilisable dont les règles guident l’IA vers des prototypes fidèles au produit.',
         skills: [
             {
                 title: 'Concevoir et maintenir le design system',
@@ -114,7 +115,7 @@ export function Home({mediaQuery816}) {
                         <h2 id='practice-title'>J’apporte mon <span>pixel</span> à l’édifice</h2>
                     </header>
 
-                    {practiceTopics.map(({id, title, introduction, skills}) => (
+                    {practiceTopics.map(({id, title, introduction, skills, conclusion}) => (
                         <section key={id} className='practice-topic' aria-labelledby={id}>
                             <header className='practice-topic__heading'>
                                 <h3 id={id}>{title}</h3>
@@ -134,6 +135,7 @@ export function Home({mediaQuery816}) {
                                     </article>
                                 ))}
                             </div>
+                            {conclusion && <p className='practice-topic__conclusion'>{conclusion}</p>}
                         </section>
                     ))}
                 </div>

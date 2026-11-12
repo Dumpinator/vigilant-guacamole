@@ -146,6 +146,15 @@
     }
   }
 
+  .practice-topic__conclusion {
+    grid-column: 1 / -1;
+    justify-self: center;
+    max-width: 55ch;
+    margin: 0;
+    font: 600 clamp(1.0625rem, 1.4vw, 1.25rem)/1.5 Karla, sans-serif;
+    text-align: center;
+  }
+
   .practice-windows {
     display: grid;
     gap: 0.95rem;
