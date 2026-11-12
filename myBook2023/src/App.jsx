@@ -18,7 +18,7 @@ function App() {
 
   return (
     <Routes>
-      <Route element={<MainLayout mediaQuery816={mediaQuery816}/> }>
+      <Route element={<MainLayout /> }>
         <Route path="/" element={<Home mediaQuery816={mediaQuery816} />} />
         <Route path="/projet/:slug" element={<Project  mediaQuery816={mediaQuery816} />} />
         <Route path="/projets" element={<Projects2  mediaQuery816={mediaQuery816} />} />
